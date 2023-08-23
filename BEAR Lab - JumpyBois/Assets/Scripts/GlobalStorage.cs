@@ -32,14 +32,17 @@ public class GlobalStorage : MonoBehaviour
     public int numTests = 0;
     public bool usingDelsys = false; // using keyboard input by default
 
-    public string characterSelection;
-    public string sceneSelection;
-
     public enum characterTypes
     {
         reindeer, // 0
         seal // 1
     }
+
+    public string characterSelection;
+    public characterTypes characterType;
+    public string sceneSelection;
+
+    
 
     private void Start()
     {

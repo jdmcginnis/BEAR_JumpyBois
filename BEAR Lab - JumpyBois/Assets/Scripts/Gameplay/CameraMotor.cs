@@ -9,13 +9,13 @@ public class CameraMotor : MonoBehaviour
     private BoxCollider2D camCollider; // For loading new tilemap modules
 
     [SerializeField] private GameObject tmapContainer;
-    private TModuleManager tmapManager;
+    private TModuleManager tmodManager;
 
 
     private void Start()
     {
         camCollider = GetComponent<BoxCollider2D>();
-        tmapManager = tmapContainer.GetComponent<TModuleManager>();
+        tmodManager = tmapContainer.GetComponent<TModuleManager>();
     }
 
     private void LateUpdate()
@@ -32,6 +32,6 @@ public class CameraMotor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        tmapManager.LoadNextModule();
+        tmodManager.LoadNextModule();
     }
 }
