@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
         enableInput = false;
     }
 
-
+    // Handles Keyboard Input Only
     public void OnGraspInput(InputAction.CallbackContext context)
     {
         if (enableInput == true)
@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Starting Action...");
                 recievingInput = true;
                 StartCoroutine(pointsBar.RenderCorrectInput());
-                StartCoroutine(LogDataCoroutine());
+                // StartCoroutine(LogDataCoroutine());
             } else if (context.canceled)
             {
                 Debug.Log("Ending Action...");
@@ -45,7 +45,26 @@ public class InputManager : MonoBehaviour
         }
 
     }
+
+    // Handles Delsys Input Only
+    public void OnDelsysInput(int input)
+    {
+        if (enableInput == true)
+        {
+            if (input == 1) // TODO: Change '1' to randGraspNum
+            {
+                Debug.Log("Starting Action...");
+                recievingInput = true;
+                StartCoroutine(pointsBar.RenderCorrectInput());
+                // StartCoroutine(LogDataCoroutine());
+            } else
+            {
+                recievingInput = false;
+            }
+        }
+    }
     
+    // Handles Both Deslsys & Keyboard Input Profiles
     public void OnSkip(InputAction.CallbackContext value)
     {
         Debug.Log("Skip This Skillcheck!");
@@ -64,6 +83,7 @@ public class InputManager : MonoBehaviour
     private void LogData()
     {
         // Log data here
+        Debug.Log("Data Logged!");
     }
 
 }
