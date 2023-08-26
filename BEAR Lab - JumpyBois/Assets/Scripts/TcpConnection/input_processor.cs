@@ -13,6 +13,7 @@ public class input_processor : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         tcp = new ipc_connect();
+        tcp.Start();
         // writer = new csv_writer(); 
         tcp.connectToServer();
     }

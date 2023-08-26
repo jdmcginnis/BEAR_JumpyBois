@@ -10,7 +10,7 @@ using System;
 using data;
 using System.Linq;
 
-public class ipc_connect : MonoBehaviour {
+public class ipc_connect {
     
     TcpListener listener;
     TcpClient client;
@@ -23,16 +23,15 @@ public class ipc_connect : MonoBehaviour {
 
     private Queue<int> bufferQueue = new Queue<int>();
 
+    [SerializeField] private InputManager inputManager;
+
     // Start is called before the first frame update
-    void Start() { 
+    public void Start() { 
         for(int i = 0; i < bufferSize; i++) {
             addToBuffer(bufferQueue, 0);
         }
     }
 
-    // Update is called once per frame
-    void Update() {
-    }
 
     public void connectToServer() {
         try {  	
@@ -76,6 +75,8 @@ public class ipc_connect : MonoBehaviour {
                             Queue<int> tempQueue = bufferQueue;
                             currMajority = calculateMode(tempQueue);
                             DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
+                            inputManager.OnDelsysInput(dataValue.majority);
+                            // send player input (datavalue)
                             writer.writeCSV(getBufferContents(tempQueue), dataValue);
                             UnityEngine.Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority); 	
 						} 
