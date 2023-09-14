@@ -10,7 +10,7 @@ using System;
 using data;
 using System.Linq;
 
-public class ipc_connect {
+public class ipc_connect: MonoBehaviour {
     
     TcpListener listener;
     TcpClient client;
@@ -30,6 +30,7 @@ public class ipc_connect {
         for(int i = 0; i < bufferSize; i++) {
             addToBuffer(bufferQueue, 0);
         }
+
     }
 
 
@@ -75,6 +76,8 @@ public class ipc_connect {
                             Queue<int> tempQueue = bufferQueue;
                             currMajority = calculateMode(tempQueue);
                             DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
+                            Debug.Log("The value is: " + dataValue.majority);
+                            Debug.Log("Testing: " + inputManager.sampleTest);
                             inputManager.OnDelsysInput(dataValue.majority);
                             // send player input (datavalue)
                             writer.writeCSV(getBufferContents(tempQueue), dataValue);

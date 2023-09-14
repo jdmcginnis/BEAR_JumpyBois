@@ -622,6 +622,8 @@ GameObject:
   m_Component:
   - component: {fileID: 766615937}
   - component: {fileID: 766615938}
+  - component: {fileID: 766615949}
+  - component: {fileID: 766615948}
   - component: {fileID: 766615939}
   - component: {fileID: 766615940}
   - component: {fileID: 766615944}
@@ -870,6 +872,7 @@ MonoBehaviour:
   inputManager: {fileID: 766615943}
   Idle: -178524345
   Walk: -1527898105
+  Jump: -1899209660
   Idle_FaceForward: -1770514295
   Idle_ToSnackTime: 462541902
   Idle_SnackTime: -1550269255
@@ -926,6 +929,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 2c9f2cd01abef054daff27b1c798b419, type: 3}
+--- !u!114 &766615948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766615936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a267e103b691974886752d18a7bfbac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 766615943}
+--- !u!114 &766615949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766615936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c931a41a41783c148803659b92af5bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &795176120
 GameObject:
   m_ObjectHideFlags: 0
