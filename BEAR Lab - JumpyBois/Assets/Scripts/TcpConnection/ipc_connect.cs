@@ -31,8 +31,12 @@ public class ipc_connect: MonoBehaviour {
             addToBuffer(bufferQueue, 0);
         }
 
+        connectToServer();
     }
 
+    private void OnApplicationQuit() {
+        Debug.Log("Application is quitting. Performing cleanup...");
+    }
 
     public void connectToServer() {
         try {  	
@@ -44,6 +48,7 @@ public class ipc_connect: MonoBehaviour {
 			Debug.Log("On client connect exception " + e);
 		}
     }
+
 
     public void listenForData() {
         IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
@@ -65,24 +70,27 @@ public class ipc_connect: MonoBehaviour {
 
                     using(stream = client.GetStream()) {
                         int length;
-                        while ((length = stream.Read(buffer, 0, buffer.Length)) != 0) { 							
-							var incommingData = new byte[length]; 							
-							Array.Copy(buffer, 0, incommingData, 0, length);  							
+                        while ((length = stream.Read(buffer, 0, buffer.Length)) != 0) {
+
+                            UnityMainThreadDispatcher.ExecuteOnMainThread(() =>
+                            {
+                                var incommingData = new byte[length]; 							
+							    Array.Copy(buffer, 0, incommingData, 0, length);  							
 							
-                            // Convert byte array to string message. 							
-							string clientMessage = Encoding.ASCII.GetString(incommingData); 							
-							Debug.Log("client message received as: " + clientMessage); 	
-                            addToBuffer(bufferQueue, int.Parse(clientMessage));
-                            Queue<int> tempQueue = bufferQueue;
-                            currMajority = calculateMode(tempQueue);
-                            DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
-                            Debug.Log("The value is: " + dataValue.majority);
-                            Debug.Log("Testing: " + inputManager.sampleTest);
-                            inputManager.OnDelsysInput(dataValue.majority);
-                            // send player input (datavalue)
-                            writer.writeCSV(getBufferContents(tempQueue), dataValue);
-                            UnityEngine.Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority); 	
-						} 
+                                // Convert byte array to string message. 							
+							    string clientMessage = Encoding.ASCII.GetString(incommingData); 							
+							    Debug.Log("client message received as: " + clientMessage); 	
+                                addToBuffer(bufferQueue, int.Parse(clientMessage));
+                                Queue<int> tempQueue = bufferQueue;
+                                currMajority = calculateMode(tempQueue);
+                                DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
+                                Debug.Log("The value is: " + dataValue.majority);
+                                inputManager.OnDelsysInput(dataValue.majority);
+                                // send player input (datavalue)
+                                writer.writeCSV(getBufferContents(tempQueue), dataValue);
+                                UnityEngine.Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority);
+                            });
+                        } 
                     }
                 }
             }
