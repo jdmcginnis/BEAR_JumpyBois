@@ -79,10 +79,5 @@ public class SkillCheckBar : MonoBehaviour
             inputManager.enableInput = true;
             inputEnabled = true;
         }
-
-        
     }
-
-
-
 }

@@ -10,7 +10,7 @@ using System;
 using data;
 using System.Linq;
 
-public class ipc_connect : MonoBehaviour {
+public class ipc_connect: MonoBehaviour {
     
     TcpListener listener;
     TcpClient client;
@@ -23,15 +23,19 @@ public class ipc_connect : MonoBehaviour {
 
     private Queue<int> bufferQueue = new Queue<int>();
 
+    [SerializeField] private InputManager inputManager;
+
     // Start is called before the first frame update
-    void Start() { 
+    public void Start() { 
         for(int i = 0; i < bufferSize; i++) {
             addToBuffer(bufferQueue, 0);
         }
+
+        connectToServer();
     }
 
-    // Update is called once per frame
-    void Update() {
+    private void OnApplicationQuit() {
+        Debug.Log("Application is quitting. Performing cleanup...");
     }
 
     public void connectToServer() {
@@ -45,14 +49,16 @@ public class ipc_connect : MonoBehaviour {
 		}
     }
 
+
     public void listenForData() {
         IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-        int port = 1324;
+        int port = 1924;
 
         listener = new TcpListener(ipAddress, port);
-        writer = new csv_writer(); 
+        writer = new csv_writer();
 
-        try{
+        try
+        {
             listener.Start();
             Debug.Log("Waiting for connection...");
 
@@ -65,20 +71,39 @@ public class ipc_connect : MonoBehaviour {
 
                     using(stream = client.GetStream()) {
                         int length;
-                        while ((length = stream.Read(buffer, 0, buffer.Length)) != 0) { 							
-							var incommingData = new byte[length]; 							
-							Array.Copy(buffer, 0, incommingData, 0, length);  							
+                        while ((length = stream.Read(buffer, 0, buffer.Length)) != 0) {
+
+                            UnityMainThreadDispatcher.ExecuteOnMainThread(() =>
+                            {
+                                var incommingData = new byte[length]; 							
+							    Array.Copy(buffer, 0, incommingData, 0, length);  							
 							
-                            // Convert byte array to string message. 							
-							string clientMessage = Encoding.ASCII.GetString(incommingData); 							
-							Debug.Log("client message received as: " + clientMessage); 	
-                            addToBuffer(bufferQueue, int.Parse(clientMessage));
-                            Queue<int> tempQueue = bufferQueue;
-                            currMajority = calculateMode(tempQueue);
-                            DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
-                            writer.writeCSV(getBufferContents(tempQueue), dataValue);
-                            UnityEngine.Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority); 	
-						} 
+                                // Convert byte array to string message. 							
+							    string clientMessage = Encoding.ASCII.GetString(incommingData);
+                                
+                                // Processes data in buffer and calculates majority
+                                if(clientMessage != null)
+                                {
+                                    Debug.Log("client message received as: " + clientMessage);
+                                    addToBuffer(bufferQueue, int.Parse(clientMessage));
+                                    Queue<int> tempQueue = bufferQueue;
+                                    currMajority = calculateMode(tempQueue);
+
+                                    // Creates a new DataPoint instance with the data calculated above and inputs into Delsys game control
+                                    DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
+                                    Debug.Log("The value is: " + dataValue.majority);
+                                    inputManager.OnDelsysInput(dataValue.majority);
+
+                                    // Records data to CSV
+                                    writer.writeHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
+                                    writer.writeDataPoint(dataValue, getBufferContents(tempQueue), inputManager.enableInput);
+                                    Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + " ,is taking input: " + inputManager.enableInput);
+                                } else
+                                {
+                                    Debug.Log("No data received");
+                                } 
+                            });
+                        } 
                     }
                 }
             }
@@ -127,7 +152,4 @@ public class ipc_connect : MonoBehaviour {
         return mode;
     }
 
-    public int getCurrentMajority() {
-        return currMajority;
-    }
 }
