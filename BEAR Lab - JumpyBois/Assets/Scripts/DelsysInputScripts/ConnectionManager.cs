@@ -60,6 +60,9 @@ public class ConnectionManager : MonoBehaviour
         listener = new TcpListener(ipAddress, port);
         writer = new CSV_Writer();
 
+        // if port is occupied, evict the squatters
+
+
         try
         {
             listener.Start();
@@ -157,9 +160,15 @@ public class ConnectionManager : MonoBehaviour
         return mode;
     }
 
-    private String GetCurrentTime()
+    private string GetCurrentTime()
     {
         DateTime currentTime = DateTime.Now;
         return currentTime.ToString("mm:ss:fff");
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("Closing Port...");
+        listener.Stop();
     }
 }
