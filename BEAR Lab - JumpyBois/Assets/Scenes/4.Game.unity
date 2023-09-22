@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 766615947}
   - component: {fileID: 766615946}
   - component: {fileID: 766615948}
+  - component: {fileID: 766615949}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -994,6 +995,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7210730c90767f14abfda130341bf2f4, type: 3}
   - {fileID: 21300000, guid: a8acdf008a1cc3148a05fdab32b73bb8, type: 3}
   accumulatedGraspProbs: 
+--- !u!114 &766615949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766615936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2202dfc0ac6aa4e45a381367d79a0f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bufferSize: 5
+  inputManager: {fileID: 766615943}
 --- !u!1 &795176120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1446,7 @@ MonoBehaviour:
   inactiveGrasps: 0200000003000000040000000800000009000000
   graspProbs: 14000000140000000000000000000000000000001400000014000000140000000000000000000000
   numTests: 20
-  usingDelsys: 0
+  usingDelsys: 1
   characterSelection: seal_black
   characterType: 1
   sceneSelection: arctic
