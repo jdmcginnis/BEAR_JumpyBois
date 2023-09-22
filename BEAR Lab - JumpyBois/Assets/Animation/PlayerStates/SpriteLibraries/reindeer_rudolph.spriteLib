@@ -1,0 +1,767 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: walk
+    m_Hash: -1919845803
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_walk_011
+      m_Hash: 649815472
+      m_Sprite: {fileID: 21300000, guid: 44bad7e37b0a40841a04a15504a4b976, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 15ddd0412d4130646a6d586ba3b97276, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_010
+      m_Hash: 1371297062
+      m_Sprite: {fileID: 21300000, guid: 5bf6d355641eee048a80e116fef5ec77, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 3cced7a5997b7dd42877b69d27a281ec, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_009
+      m_Hash: 830201027
+      m_Sprite: {fileID: 21300000, guid: da807d21779c014439dcabdf2a8ee6bc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7cd50b58f95852247986573eb7c3391f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_008
+      m_Hash: 1182592085
+      m_Sprite: {fileID: 21300000, guid: 13f2336d59d4c9b43be670f3d71be5d3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: ea0bc85d35463634991ea1235bab5965, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_007
+      m_Hash: -691801660
+      m_Sprite: {fileID: 21300000, guid: 033f8c018adf1ec4c8b2adf0a478283f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 144c711be5c40374eb24d978fab81078, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_006
+      m_Hash: -1580940974
+      m_Sprite: {fileID: 21300000, guid: 086427c9108c45148ae4bc079ffcbd0f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: d2f944f47a8604c4dbf70e89085d9e39, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_005
+      m_Hash: 952996072
+      m_Sprite: {fileID: 21300000, guid: 55503c4d139d67f45941680a334f957d, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: ef12da8ec52ab3d4ba6918013cf6ff7c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_004
+      m_Hash: 1338679422
+      m_Sprite: {fileID: 21300000, guid: 089152d2bd4628c47ba43f4deadc8727, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7272aa36cedc46d44b794ac288a6f4fb, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_003
+      m_Hash: -777112099
+      m_Sprite: {fileID: 21300000, guid: 6246bbd7bfa78b849a1b5886b6b1f168, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7c99d10d63d68f344ad316f407595926, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_002
+      m_Hash: -1498872501
+      m_Sprite: {fileID: 21300000, guid: cfd610819b239ff43b4c7f71ca949036, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 943f3487e84de474b9d5ed1fc1914b7e, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_001
+      m_Hash: 1067472113
+      m_Sprite: {fileID: 21300000, guid: cec48eb3b9179bf4384870d19c7fd00d, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 37e6bf3de09ef3848ab0b658b54d0582, type: 3}
+    - m_Name: __brown_reindeer_without_harness_walk_000
+      m_Hash: 1218929767
+      m_Sprite: {fileID: 21300000, guid: 4a4fdd0e157cfbc48868eb930d1a31e1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 6151c7074f75b514c880212217a7f823, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 12
+  - m_Name: jump
+    m_Hash: -1481439722
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_jump_000
+      m_Hash: -521892490
+      m_Sprite: {fileID: 21300000, guid: 5974b02c6f9c8824982c0d9848696d7f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f011ca0801eadc946a5d98ae6021c83c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_001
+      m_Hash: -1746682400
+      m_Sprite: {fileID: 21300000, guid: a8d2a76f6dfbc61468053a0ca86a3a8e, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 91474b601e2d5654b9e6777ae801eb7a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_002
+      m_Hash: 250276954
+      m_Sprite: {fileID: 21300000, guid: 5b90c91aa0b7bb34d8c7052af0b63f50, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7a2e39030b816c4429c32eeb60c9b47a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_003
+      m_Hash: 2045631692
+      m_Sprite: {fileID: 21300000, guid: 1aa2c0644dac5734e948406e13fe179f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 587ce16c9b6f8e54f86687f4b000dc33, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_004
+      m_Hash: -410433169
+      m_Sprite: {fileID: 21300000, guid: 8b0bbfd4c0ec46743af670a866a1d9e6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 55fcb0240684c0b48ba9d9aa8ff433a8, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_005
+      m_Hash: -1869710855
+      m_Sprite: {fileID: 21300000, guid: 2ace305ad2fa62e4f80d7042605d25a8, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4c1cee181c5e9b34cbe76feecde3268d, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_006
+      m_Hash: 159852611
+      m_Sprite: {fileID: 21300000, guid: b7ad2339442986140926dc04d802bd68, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 834e3964c09d8674f806f0bc0f223d99, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_007
+      m_Hash: 2122324181
+      m_Sprite: {fileID: 21300000, guid: 019f8bfbe6330d24bbbbc167ff8fa8a7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 65812362a9899c74e87b039ecdb1007b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_008
+      m_Hash: -297859772
+      m_Sprite: {fileID: 21300000, guid: bf7962d642fe85741805b0041df1d9b7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 0a701b340e3b564478a0472a0ef5ed59, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_009
+      m_Hash: -1724369454
+      m_Sprite: {fileID: 21300000, guid: 803fd366244785c448c97595949a8915, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4713373f26ce93542ad948e501be83b4, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: idle_toSnackTime
+    m_Hash: 2026930064
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_eat_transition_to_000
+      m_Hash: -1583281880
+      m_Sprite: {fileID: 21300000, guid: e4c77f33413bd834ca590afb9da7728b, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 8f5d2fd22c55dd34497e73554927163b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_to_001
+      m_Hash: -693749314
+      m_Sprite: {fileID: 21300000, guid: 6330979c0b6c3df43817d17ef9cf69bb, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 92e764e85bb4de44fbc5fb4236a8eb2b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_to_002
+      m_Hash: 1336895492
+      m_Sprite: {fileID: 21300000, guid: 7ce1e4314a91fc14a821c51c61fd5dbb, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f16bf8f692624004c87f74ca24039853, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_to_003
+      m_Hash: 950556818
+      m_Sprite: {fileID: 21300000, guid: b1ed19fb3c5baa44cbbc3a4a30c6a26a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 895d1e13cb01b2d42884ee4351462d8d, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_to_004
+      m_Hash: -1496527567
+      m_Sprite: {fileID: 21300000, guid: a6b5e09961cd6224a99fdbea8c124129, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: b86cd66d91993c046a1b036af8d052ff, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  - m_Name: idle_toSleepyTime
+    m_Hash: 1259352418
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_000
+      m_Hash: -130663086
+      m_Sprite: {fileID: 21300000, guid: 23d3cc33fba21ba4d818582e49ad550f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 1bcc23c418b04da4e8b75f60f3d8f39a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_001
+      m_Hash: -1892610620
+      m_Sprite: {fileID: 21300000, guid: e7dcf184ce0d0344085969f63f72685c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a0f0645126c27d649ae6f2b66af70b21, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_002
+      m_Hash: 372792446
+      m_Sprite: {fileID: 21300000, guid: cb831b5796da4a540aa425ee29a6d589, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: cbb9205339fc52049b8a78560d2dc4f7, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_003
+      m_Hash: 1631546600
+      m_Sprite: {fileID: 21300000, guid: 8584cdc84c8c0a54bbc48c4b65831514, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 2f3c10ceb6bca974ba39ea15a36d553c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_004
+      m_Hash: -27526837
+      m_Sprite: {fileID: 21300000, guid: f1d47f5c9b6aa2d419c0537392c7e62c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a45579a8bf1b0264cabb84fb4d043594, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_005
+      m_Hash: -2007184931
+      m_Sprite: {fileID: 21300000, guid: 6163fda31c2cf7540a1f08d19945bb5c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: ceccfd2276a2f1a489b591c3c96f2e4f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_006
+      m_Hash: 290822247
+      m_Sprite: {fileID: 21300000, guid: 7dc7de6879f3cb346afa54b9ed4878ba, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 413bf270439581e419b25900905ba8c9, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_007
+      m_Hash: 1716693233
+      m_Sprite: {fileID: 21300000, guid: d405ac48908bd2148a0524ab33c16573, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 1ef0a47435edc564b9caeac3370e577f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_008
+      m_Hash: -152193696
+      m_Sprite: {fileID: 21300000, guid: 65239726b341c9c4dafaec33815c2866, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a0a69727ef070904a807898ace7cc9f1, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_to_009
+      m_Hash: -2115336714
+      m_Sprite: {fileID: 21300000, guid: 6f55b3d4b251f504c966c9d0be786a25, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 53aa9043d1546704f95a7062c8b200e2, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: idle_snackTime
+    m_Hash: -699357609
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_eating_000
+      m_Hash: -437301566
+      m_Sprite: {fileID: 21300000, guid: 8663bd51725466f40bf43cc693d9d23e, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: d81b5070049c11d4aaf20a87c3f780aa, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_001
+      m_Hash: -1830257068
+      m_Sprite: {fileID: 21300000, guid: d75617f6cdc06144b9f53e4c6a3a00e9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 62672fe13d33bd94682c98c7cc5969c3, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_002
+      m_Hash: 199307246
+      m_Sprite: {fileID: 21300000, guid: 3b40840272023e24e988c1dab915365b, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4a2985cf7b96f4e44aa7ddccaa45ac95, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_003
+      m_Hash: 2095456120
+      m_Sprite: {fileID: 21300000, guid: 652ef66573ba4fe45b2a1c377622ab44, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4fafdce765251564d95a6bf186dfa6da, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_004
+      m_Hash: -494761253
+      m_Sprite: {fileID: 21300000, guid: c877b7e9a7cb58e46ad36e42a8c86320, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 229dee20b1e17314ba3479fc7db9bb36, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_005
+      m_Hash: -1786398131
+      m_Sprite: {fileID: 21300000, guid: 0301af711bb6e2b499f55d85f348b7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: d854328899fbf714ea68a0afd35a070f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_006
+      m_Hash: 210562039
+      m_Sprite: {fileID: 21300000, guid: 5cd207f9f39771f40a59ab11aeacc3b6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 6e3b7f89fcd1bcf49a03b53abf80b288, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_007
+      m_Hash: 2072763233
+      m_Sprite: {fileID: 21300000, guid: 26dd3325babadda4e80954bf08f3f8dd, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 84971eccc0753674eb04753f97c4c248, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_008
+      m_Hash: -348862736
+      m_Sprite: {fileID: 21300000, guid: 69725576580a05e44a309af6daa48dd0, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f0dcd1dd0ea623d4c9037cf851199562, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_009
+      m_Hash: -1674316186
+      m_Sprite: {fileID: 21300000, guid: b7d7473feba964c4d86ef9826fb09316, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 6024d8c7d6e511a488e19e86c566b40a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_010
+      m_Hash: -51085437
+      m_Sprite: {fileID: 21300000, guid: 16807d11f8e6e774c8fba778c16b60ee, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 5a9a27bacffd1d34dba51a59fa496431, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_011
+      m_Hash: -1946988779
+      m_Sprite: {fileID: 21300000, guid: 87540cb568c7f0548b4ba9bc687c097a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 131f55101867f354aa987eb6040934d9, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_012
+      m_Hash: 318381743
+      m_Sprite: {fileID: 21300000, guid: ac0ab92725deac148be55acede53c777, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7f60c2adc8ef87c428eb5237d148861b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_013
+      m_Hash: 1711091257
+      m_Sprite: {fileID: 21300000, guid: 447de153063c06f4e83f707a036c2a84, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c51bcc7c88925bc44b9c9be1c084bea1, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_014
+      m_Hash: -73811046
+      m_Sprite: {fileID: 21300000, guid: 44f7335b9fc8c0540971cfbe042f8ece, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 887646a365d47b34688345cee8871883, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_015
+      m_Hash: -1935766772
+      m_Sprite: {fileID: 21300000, guid: 19ac625ed8e74814bb4036e4d3149f63, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 34014292818241f4092c51164968baac, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_016
+      m_Hash: 362273462
+      m_Sprite: {fileID: 21300000, guid: 1ed1d1be4a0369443817ed8502149c09, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 33c530dba268d8940ad0bd09568bf40b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_017
+      m_Hash: 1653664288
+      m_Sprite: {fileID: 21300000, guid: fbc44bb26b9f65746be803cb7c6e9bc2, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 2f661998d713f5a42af27f85bfab4774, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_018
+      m_Hash: -231737423
+      m_Sprite: {fileID: 21300000, guid: 43a7b68ad44b2e042850b2ed7422e381, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 5354be2a5c7f23d41b832405d970b2a5, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eating_019
+      m_Hash: -2060925145
+      m_Sprite: {fileID: 21300000, guid: e0037f7b9d9de4540aef6162ae6f6581, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 124cdaf92c4a879469cddcf11d6a43cc, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 20
+  - m_Name: idle_sleepyTime
+    m_Hash: 1321133736
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_000
+      m_Hash: 1515560927
+      m_Sprite: {fileID: 21300000, guid: 3e448baf826e8d04e818e5be3b6242d9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4fd008b0fda2df94cb680cdf58b8ad73, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_001
+      m_Hash: 760393545
+      m_Sprite: {fileID: 21300000, guid: 7310f569f49b47c4280e7f5a082988f0, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 333dbd57a51e79749a7b4ef85704732c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_002
+      m_Hash: -1269039373
+      m_Sprite: {fileID: 21300000, guid: 777648d7c3e74be4497be533a76205b1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: b5dc3b084ce645e488d8470a7efd6b55, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_003
+      m_Hash: -1017328027
+      m_Sprite: {fileID: 21300000, guid: d171de10475345243a2901afe4915277, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c6bcdb9c5ebc5c24e8329332b752c2a6, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_004
+      m_Hash: 1563974598
+      m_Sprite: {fileID: 21300000, guid: cf997530bd9eebe49b0dab2b84359bf5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 1c224c05c516def47840c324150112cf, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_005
+      m_Hash: 708799312
+      m_Sprite: {fileID: 21300000, guid: 04b1b3b2c4455684eabf573624e580d5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7109307ec951b074dadbabc7059c7abc, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_006
+      m_Hash: -1288291606
+      m_Sprite: {fileID: 21300000, guid: d1a78abecf6a2ce46aaf801de2d75ba9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: cbfad9736e74801469781be9be17ff50, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_007
+      m_Hash: -1003419012
+      m_Sprite: {fileID: 21300000, guid: 09f8f0fae5e770c4fb6b570a98e39756, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 282d1c7d2f96d85458abdf457ed95ef0, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_008
+      m_Hash: 1418598381
+      m_Sprite: {fileID: 21300000, guid: 29c4ba9cccec42243ad898717a1abe30, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a9cf8d2db478c4e409add5cc0edaeb9b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_009
+      m_Hash: 596191099
+      m_Sprite: {fileID: 21300000, guid: b4cc9e5c765e2a04eb96ab62788734ac, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 9958899a630a3814b9e9906f05d66fc8, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_010
+      m_Hash: 1129229982
+      m_Sprite: {fileID: 21300000, guid: b5601736ece99934c914fe5f5adfe424, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 1063184a566717c4b87f7ff608ce29e8, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_011
+      m_Hash: 877239816
+      m_Sprite: {fileID: 21300000, guid: a7f2c9265ebdf724e9837e5fb7cf7bbc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c942ded189793c6439417f621791f7ee, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_012
+      m_Hash: -1388261454
+      m_Sprite: {fileID: 21300000, guid: b51b2fde0c25c6c43a80e3128e770fd7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f8b0fa07d051c4347b6f1245649add44, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_013
+      m_Hash: -632815836
+      m_Sprite: {fileID: 21300000, guid: 88d7d6fc7f53f034098974a4e6452169, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: acacbd78a1cfdc841bb2ac5753b300e1, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_014
+      m_Hash: 1143171719
+      m_Sprite: {fileID: 21300000, guid: c22f43871ef6839479e944d1e0280c23, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: dc5d4a26be1e62f49a2b5fc60e24775c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_015
+      m_Hash: 858020369
+      m_Sprite: {fileID: 21300000, guid: 392c176102c90ea4aa40a90aa7aff837, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 06340886de27f5146b70b741663b4070, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_016
+      m_Hash: -1439888469
+      m_Sprite: {fileID: 21300000, guid: a846744cffc8e98468d89142f050b8b6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 107a7b44d00e9934e8fd0879a213de9c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_017
+      m_Hash: -584434883
+      m_Sprite: {fileID: 21300000, guid: 2f45c6301c0b0684da1c77cff6771f2c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: dd4eaed13e2e08b40b0da0aa8668b7df, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_018
+      m_Hash: 1301620396
+      m_Sprite: {fileID: 21300000, guid: af588e7a869344541afb3b08f72d0c89, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: fac8863b69ed4c84f8d679019f4e2120, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_laying_down_019
+      m_Hash: 982652474
+      m_Sprite: {fileID: 21300000, guid: 21dfc6f60b65b354883ed59de9d15a9c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7bc26b7a53ea402438879cf53b5dcb64, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 20
+  - m_Name: idle_fromSnackTime
+    m_Hash: 1245059343
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_eat_transition_from_000
+      m_Hash: 65831893
+      m_Sprite: {fileID: 21300000, guid: 1c310cd1d3079254fb241f0fcc3ca7d9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7b34088630e40094c8d4107dd5ac011f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_from_001
+      m_Hash: 1961603907
+      m_Sprite: {fileID: 21300000, guid: 2c4024b33c9f1ea48b81a81bc0030956, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 2d91a55a76279bd46afd4f63177a6965, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_from_002
+      m_Hash: -303897863
+      m_Sprite: {fileID: 21300000, guid: 39f7895b73ce3c342b31166a039f1b55, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: efc2c723760657b49a875be24524e8c4, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_from_003
+      m_Hash: -1696214417
+      m_Sprite: {fileID: 21300000, guid: e8e83f05c29906940aed3b06f9b7d11b, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: df4006f25f15b9541b5c8496c5a9184b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_eat_transition_from_004
+      m_Hash: 75581388
+      m_Sprite: {fileID: 21300000, guid: 2ee10dfd7bac10e4daa8f76284ee7ea8, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: ba6e32303a71ac342962d4493feb47b5, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  - m_Name: idle_fromSleepyTime
+    m_Hash: 731011537
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_000
+      m_Hash: -142033013
+      m_Sprite: {fileID: 21300000, guid: 87ed7457d3402d1488387daa257c673e, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: bc4332648eab0584cb150524831ddfa0, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_001
+      m_Hash: -2138075363
+      m_Sprite: {fileID: 21300000, guid: f551831290191ea4dbe27788ce487f25, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 70b710fe065e3744abf404986101e44f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_002
+      m_Hash: 428269223
+      m_Sprite: {fileID: 21300000, guid: 7e0a432661ba73d4ab4a61401d415cc4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: fc84c0f2233a9d24692b62988e9c87de, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_003
+      m_Hash: 1854008881
+      m_Sprite: {fileID: 21300000, guid: b816949cec5c9294792d497bbf5ce590, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f1d6af6c55c70e044a927237a0437c0e, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_004
+      m_Hash: -253396078
+      m_Sprite: {fileID: 21300000, guid: f04f37c2f5af742419e608236f55e714, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: cbd0dae066175a444849df7087d55de9, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_005
+      m_Hash: -2015212796
+      m_Sprite: {fileID: 21300000, guid: 7764c010ab2d1894fa35bf3f375286dc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 25d02427cfe35e04bab249e2926fc38a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_006
+      m_Hash: 518724286
+      m_Sprite: {fileID: 21300000, guid: 4087d2e5fc078ff49a77b65051e652f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 5ad5c7ba0857d384682271c75dd716ef, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_007
+      m_Hash: 1777084968
+      m_Sprite: {fileID: 21300000, guid: 02296e34624057148921fea7a0cfcf34, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 6dbc3d3c2067da74e839d8d01077dac4, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_008
+      m_Hash: -111986759
+      m_Sprite: {fileID: 21300000, guid: 529a9960a5ffe5142b3a38e7fb0077a2, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 5d2c3df729590c647ab380c04ed3712e, type: 3}
+    - m_Name: __brown_reindeer_without_harness_laydown_transition_from_009
+      m_Hash: -1907095761
+      m_Sprite: {fileID: 21300000, guid: 00dd07426947cce4cb29fa63f96d7fd7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: b07cf626c5af78f49935b71e42f7f740, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: idle_faceForward
+    m_Hash: -180767913
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_000
+      m_Hash: 750524321
+      m_Sprite: {fileID: 21300000, guid: 988bcd2a19ad1a34bb2bbfc521ecc6d9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 08e71b319707b6044a8267fff0cca3fc, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_001
+      m_Hash: 1538991927
+      m_Sprite: {fileID: 21300000, guid: b54cef099233c114882bbe8ac94999b0, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 87f52b0a927b5ee438b1cbe54047b414, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_002
+      m_Hash: -1028491635
+      m_Sprite: {fileID: 21300000, guid: d92eaf382c048cf48b1d049d1e1da39e, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 08a41a188a944c14a9ff57c58781b6f8, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_003
+      m_Hash: -1246411237
+      m_Sprite: {fileID: 21300000, guid: f5882387e9b0e0c4480d3774141f4b15, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 896516e4eb57b504999e3a4db9100732, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_004
+      m_Hash: 735171512
+      m_Sprite: {fileID: 21300000, guid: 9d8d9f1e3e5647f4fae32a1f9df52e76, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 45887c16aa0077341925a61e7270d8da, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_005
+      m_Hash: 1557586734
+      m_Sprite: {fileID: 21300000, guid: 77030356c1162f74ea2e01efa639f2d2, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 6230d50166a807640833bbc1c5d0c13b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_006
+      m_Hash: -975195500
+      m_Sprite: {fileID: 21300000, guid: fbe9bbeac5d2aa54f8bdb46095e73a2a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 8133fb16517aaf74aa2faeae8a4eb48b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_007
+      m_Hash: -1294433790
+      m_Sprite: {fileID: 21300000, guid: 6d2e070c37e4dab4ea3621baf03140e0, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c4e10ffa8826ce944a2e07b47c7fbb45, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_008
+      m_Hash: 577216403
+      m_Sprite: {fileID: 21300000, guid: 4a6f130c8d7e93f4e8ec6c52fb0541a6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c5f3e2cfd78938548ba7667c9f492b36, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_009
+      m_Hash: 1432399621
+      m_Sprite: {fileID: 21300000, guid: 2b8ceedd7e93dbe4aa78b967831bb901, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a86ea7f97c596ae4e884758fb387f117, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_010
+      m_Hash: 900146912
+      m_Sprite: {fileID: 21300000, guid: 09645af77c26a5d41ab19a2f9f0417c6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 97a6425ba6ffeee4c8a0b1f84201c5b3, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_011
+      m_Hash: 1117787766
+      m_Sprite: {fileID: 21300000, guid: fdf55004b8390e64c95512a747200b68, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: b69706b0e66640041b588c6fab2e3019, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_012
+      m_Hash: -609663028
+      m_Sprite: {fileID: 21300000, guid: 51f4b5543858c1445804271cef005744, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 9ca814e2b6c80a949a10f2207bc61a8f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_013
+      m_Hash: -1397852326
+      m_Sprite: {fileID: 21300000, guid: fb8e356c33178cd4bbf38e075157fdb9, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: c4006d34f3c35814289e4654d89f5726, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_014
+      m_Hash: 852157177
+      m_Sprite: {fileID: 21300000, guid: fe75b7114510e314d8599cbc73f29061, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a641eac8c5a42ba439142b04280be0ee, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_015
+      m_Hash: 1171116655
+      m_Sprite: {fileID: 21300000, guid: 3f445c5484d39084d84bd613b4fd84e6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f76a71a1135badd43a92d17ae74c31ee, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_016
+      m_Hash: -591100971
+      m_Sprite: {fileID: 21300000, guid: 24f78cdea1d26a34a9db138b8a3f3de3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: b3eedfdee62ed5e43b0cefaaef554313, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_017
+      m_Hash: -1413237949
+      m_Sprite: {fileID: 21300000, guid: 54a91d40e83694b4483e448b66e6f008, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 794e05c18de792f48b03a78377e8144b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_018
+      m_Hash: 998026962
+      m_Sprite: {fileID: 21300000, guid: 34d42af1b190c8645bb8da21897d1804, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: febbecbdbe9871e40b7bf63cb44489f9, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_facing_forward_019
+      m_Hash: 1283169860
+      m_Sprite: {fileID: 21300000, guid: fe584733bd15ef94384f514bdff5897d, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 586e0cb9be69c924aa4c409b633606db, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 20
+  - m_Name: idle
+    m_Hash: -601574123
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_idle_000
+      m_Hash: -862005576
+      m_Sprite: {fileID: 21300000, guid: ed52cb7ea57f1ef4dae6347df25eec65, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 70b7c74328a69b34eb87c655167de64b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_001
+      m_Hash: -1147541970
+      m_Sprite: {fileID: 21300000, guid: 60aca7cfebc4bdf4f9a321e7fdb0ab3c, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a942f9d361ba3de40a4c4c43de75697b, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_002
+      m_Hash: 579909524
+      m_Sprite: {fileID: 21300000, guid: 3126109e569e2ea478626348596524af, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 60b6f4fa275447f4ab8848efe7cf3d36, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_003
+      m_Hash: 1435993858
+      m_Sprite: {fileID: 21300000, guid: faaba7083afe090418d492310704c01b, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: bd9aadf690ab588498647e61dbeb793d, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_004
+      m_Hash: -873262431
+      m_Sprite: {fileID: 21300000, guid: 858b7c465e6c65544a06d011fd756a73, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 5d663a260d7b0b9438baf099462d23d6, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_005
+      m_Hash: -1124851145
+      m_Sprite: {fileID: 21300000, guid: ba0674b1fba0c6f4eaf3dbba1f661fcb, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: eb5c404ca2c8f2a45a9da17b83e3c544, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_006
+      m_Hash: 637367181
+      m_Sprite: {fileID: 21300000, guid: 15e93cef1dede9e4c89b2111c6158c26, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 4b7d49bb5c54681459de244e03684f70, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_007
+      m_Hash: 1392132891
+      m_Sprite: {fileID: 21300000, guid: 5fcd90f3510084d458b42be53368eff2, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: ca563f58be3dff14c9c09c392f614f07, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_008
+      m_Hash: -1035641206
+      m_Sprite: {fileID: 21300000, guid: 33782581cf940f34394ee890634060cc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7fecf48703e32ee46871f5228c963ff5, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_009
+      m_Hash: -1253937636
+      m_Sprite: {fileID: 21300000, guid: 84162a49f960ded499c13fee0456caa5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 8493ea8f2b80df542a21d38a41f88b6f, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_010
+      m_Hash: -712644615
+      m_Sprite: {fileID: 21300000, guid: 471950daa2570ec4fa352d5a46e1f031, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: d57ad58e09646634591ba6b52576f333, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_011
+      m_Hash: -1568483473
+      m_Sprite: {fileID: 21300000, guid: 179a784311e4b4045a6dfae27ac6c372, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: a138d29c7fe58354b8a9348c29f9e1be, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_012
+      m_Hash: 998999765
+      m_Sprite: {fileID: 21300000, guid: 1425020906a92c24493c6cb42a47ffca, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: e64ec6524d58a0043b20c3b2935ecc07, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_013
+      m_Hash: 1284290115
+      m_Sprite: {fileID: 21300000, guid: 9a93a72456b08bf4abcd00e3f0f77182, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 91a7531a03cf7444fb55011a686d8366, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_014
+      m_Hash: -756538400
+      m_Sprite: {fileID: 21300000, guid: 083d83d0b81fe7b4fbac5b8a464b1999, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 51c912f421be74546923cd48cf858e89, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_015
+      m_Hash: -1511058570
+      m_Sprite: {fileID: 21300000, guid: f4516045e0d73d3478bdbba45a76480b, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 511432831f3491141972cec10271855c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_016
+      m_Hash: 1021723340
+      m_Sprite: {fileID: 21300000, guid: 6d5820719e4fc1545bb0c0dfa44698fc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: e6f4131e73ede7e43a790d7b9327d4fb, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_017
+      m_Hash: 1273066074
+      m_Sprite: {fileID: 21300000, guid: 99cfe0e7832c8cb46b71270a3ea2f697, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: e7fde96fdc148be409a73f9835339d61, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_018
+      m_Hash: -614567989
+      m_Sprite: {fileID: 21300000, guid: d8ffcf8eb9a2b0a4a8ca66b76d9bd9d0, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 16ada12c8a6d0ed4baec37e31cbd16db, type: 3}
+    - m_Name: __brown_reindeer_without_harness_idle_019
+      m_Hash: -1403429027
+      m_Sprite: {fileID: 21300000, guid: fb66c364ccd60364e8818161078b0761, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: cd192fada328e854d9802a943ab65528, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 20
+  - m_Name: gameComplete
+    m_Hash: 1520118823
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __brown_reindeer_without_harness_jump_000
+      m_Hash: -521892490
+      m_Sprite: {fileID: 21300000, guid: 5974b02c6f9c8824982c0d9848696d7f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: f011ca0801eadc946a5d98ae6021c83c, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_001
+      m_Hash: -1746682400
+      m_Sprite: {fileID: 21300000, guid: a8d2a76f6dfbc61468053a0ca86a3a8e, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 91474b601e2d5654b9e6777ae801eb7a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_002
+      m_Hash: 250276954
+      m_Sprite: {fileID: 21300000, guid: 5b90c91aa0b7bb34d8c7052af0b63f50, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 7a2e39030b816c4429c32eeb60c9b47a, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_003
+      m_Hash: 2045631692
+      m_Sprite: {fileID: 21300000, guid: 1aa2c0644dac5734e948406e13fe179f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 587ce16c9b6f8e54f86687f4b000dc33, type: 3}
+    - m_Name: __brown_reindeer_without_harness_jump_004
+      m_Hash: -410433169
+      m_Sprite: {fileID: 21300000, guid: 8b0bbfd4c0ec46743af670a866a1d9e6, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 21300000, guid: 55fcb0240684c0b48ba9d9aa8ff433a8, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  m_PrimaryLibraryGUID: 2c9f2cd01abef054daff27b1c798b419

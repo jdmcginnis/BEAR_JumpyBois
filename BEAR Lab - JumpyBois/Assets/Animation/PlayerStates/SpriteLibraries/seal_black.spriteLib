@@ -1,0 +1,537 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: walk
+    m_Hash: -1919845803
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_move_on_land_000
+      m_Hash: 556838450
+      m_Sprite: {fileID: 21300000, guid: 65375b9147807434ba59a1b91c952460, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 65375b9147807434ba59a1b91c952460, type: 3}
+    - m_Name: __black_seal_move_on_land_001
+      m_Hash: 1446485668
+      m_Sprite: {fileID: 21300000, guid: b616b9f6fe7c7f443ba87d76deddd892, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b616b9f6fe7c7f443ba87d76deddd892, type: 3}
+    - m_Name: __black_seal_move_on_land_002
+      m_Hash: -817967330
+      m_Sprite: {fileID: 21300000, guid: 1f5972b47725a1a4bb8c3a57411c6a4c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1f5972b47725a1a4bb8c3a57411c6a4c, type: 3}
+    - m_Name: __black_seal_move_on_land_003
+      m_Hash: -1204158584
+      m_Sprite: {fileID: 21300000, guid: 9e41e8d7af5c162489f89f41cdf02fa6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9e41e8d7af5c162489f89f41cdf02fa6, type: 3}
+    - m_Name: __black_seal_move_on_land_004
+      m_Hash: 643656235
+      m_Sprite: {fileID: 21300000, guid: 59926187a6f1c2d46a2cab56ee77b7d6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 59926187a6f1c2d46a2cab56ee77b7d6, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: jump
+    m_Hash: -1481439722
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_move_jumping_on_land_000
+      m_Hash: 199333509
+      m_Sprite: {fileID: 21300000, guid: 5b1ddb39fdef43b408e71392fbba3c22, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5b1ddb39fdef43b408e71392fbba3c22, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_001
+      m_Hash: 2095490579
+      m_Sprite: {fileID: 21300000, guid: 36433c02d7c549347b96a63f3ace2614, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 36433c02d7c549347b96a63f3ace2614, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_002
+      m_Hash: -437258327
+      m_Sprite: {fileID: 21300000, guid: c1526e2cc1b149542b64072947a42801, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: c1526e2cc1b149542b64072947a42801, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_003
+      m_Hash: -1830238401
+      m_Sprite: {fileID: 21300000, guid: 9822e50f74fa0134490524d61e76b563, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9822e50f74fa0134490524d61e76b563, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_004
+      m_Hash: 210522780
+      m_Sprite: {fileID: 21300000, guid: 88487f24e6a04264eb95ebe5324d5197, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 88487f24e6a04264eb95ebe5324d5197, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: idle_toSnackTime
+    m_Hash: 2026930064
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_000
+      m_Hash: -719630495
+      m_Sprite: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_001
+      m_Hash: -1575190537
+      m_Sprite: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_002
+      m_Hash: 991243853
+      m_Sprite: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_003
+      m_Hash: 1276255963
+      m_Sprite: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: idle_toSleepyTime
+    m_Hash: 1259352418
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_transion_upright_laying_down_000
+      m_Hash: -513401415
+      m_Sprite: {fileID: 21300000, guid: f1f98884809933f46b4136077a12d7d0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f1f98884809933f46b4136077a12d7d0, type: 3}
+    - m_Name: __black_seal_transion_upright_laying_down_001
+      m_Hash: -1772016337
+      m_Sprite: {fileID: 21300000, guid: 8800d2d3ee9cd454e935335acd5a5fe3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8800d2d3ee9cd454e935335acd5a5fe3, type: 3}
+    - m_Name: __black_seal_transion_upright_laying_down_002
+      m_Hash: 258505877
+      m_Sprite: {fileID: 21300000, guid: 9fd2f5a7c4f7c444cbdc4a5d8e74f65e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9fd2f5a7c4f7c444cbdc4a5d8e74f65e, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: idle_snackTime
+    m_Hash: -699357609
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_000
+      m_Hash: -719630495
+      m_Sprite: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_001
+      m_Hash: -1575190537
+      m_Sprite: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_002
+      m_Hash: 991243853
+      m_Sprite: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_003
+      m_Hash: 1276255963
+      m_Sprite: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_004
+      m_Hash: -763982984
+      m_Sprite: {fileID: 21300000, guid: 3f9e2eef252304e47aefd3c71f0c3351, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3f9e2eef252304e47aefd3c71f0c3351, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_005
+      m_Hash: -1519272978
+      m_Sprite: {fileID: 21300000, guid: 68e48a42bde59a04683378fcf69953e0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 68e48a42bde59a04683378fcf69953e0, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_006
+      m_Hash: 1014557268
+      m_Sprite: {fileID: 21300000, guid: 7e9c14b0d3829a540801fc4aeb5186e8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7e9c14b0d3829a540801fc4aeb5186e8, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_007
+      m_Hash: 1266670274
+      m_Sprite: {fileID: 21300000, guid: 84d1aafe5acda2f4ab3cb2c89ca715e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 84d1aafe5acda2f4ab3cb2c89ca715e5, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_008
+      m_Hash: -608123053
+      m_Sprite: {fileID: 21300000, guid: aec74c42edc92a641abd8b2eae84faaf, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: aec74c42edc92a641abd8b2eae84faaf, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_009
+      m_Hash: -1396181051
+      m_Sprite: {fileID: 21300000, guid: d4d453398dc8d1b47a6cd64126b678fd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d4d453398dc8d1b47a6cd64126b678fd, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_010
+      m_Hash: -872382944
+      m_Sprite: {fileID: 21300000, guid: 54b51bd7d4100034bb66ba816d024ed0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 54b51bd7d4100034bb66ba816d024ed0, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_011
+      m_Hash: -1157149002
+      m_Sprite: {fileID: 21300000, guid: 20ac0b96550cbb946acc6c5af6f82973, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 20ac0b96550cbb946acc6c5af6f82973, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_012
+      m_Hash: 571350796
+      m_Sprite: {fileID: 21300000, guid: cc5d86a333c99214db2f40122f8cca8b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cc5d86a333c99214db2f40122f8cca8b, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_013
+      m_Hash: 1426665370
+      m_Sprite: {fileID: 21300000, guid: d427da6d5bcd30142b9bbb27ffd0f6a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d427da6d5bcd30142b9bbb27ffd0f6a1, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_014
+      m_Hash: -882001351
+      m_Sprite: {fileID: 21300000, guid: da31a2f991fe7434e8352474770fb849, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: da31a2f991fe7434e8352474770fb849, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_015
+      m_Hash: -1133868369
+      m_Sprite: {fileID: 21300000, guid: 7503053ff4fa1914887270366af8b1da, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7503053ff4fa1914887270366af8b1da, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 16
+  - m_Name: idle_sleepyTime
+    m_Hash: 1321133736
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_000
+      m_Hash: -1620008260
+      m_Sprite: {fileID: 21300000, guid: 11491e691a30dcf47b99b93f52d44eb9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 11491e691a30dcf47b99b93f52d44eb9, type: 3}
+    - m_Name: __black_seal_idle_on_land_001
+      m_Hash: -394816982
+      m_Sprite: {fileID: 21300000, guid: e018b571eda3e5e48abaf7460016be0c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e018b571eda3e5e48abaf7460016be0c, type: 3}
+    - m_Name: __black_seal_idle_on_land_002
+      m_Hash: 1904133008
+      m_Sprite: {fileID: 21300000, guid: eadf7b5e3d14e114486a523b99006745, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: eadf7b5e3d14e114486a523b99006745, type: 3}
+    - m_Name: __black_seal_idle_on_land_003
+      m_Hash: 108655366
+      m_Sprite: {fileID: 21300000, guid: 3a912f2a470e50241a11c1004f57472a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3a912f2a470e50241a11c1004f57472a, type: 3}
+    - m_Name: __black_seal_idle_on_land_004
+      m_Hash: -1742903643
+      m_Sprite: {fileID: 21300000, guid: ad701202e7bcfcb46b7865b88409e694, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ad701202e7bcfcb46b7865b88409e694, type: 3}
+    - m_Name: __black_seal_idle_on_land_005
+      m_Hash: -283486669
+      m_Sprite: {fileID: 21300000, guid: 076adb9cf9e0aa94c9d306a696a073bf, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 076adb9cf9e0aa94c9d306a696a073bf, type: 3}
+    - m_Name: __black_seal_idle_on_land_006
+      m_Hash: 1980958601
+      m_Sprite: {fileID: 21300000, guid: a2c7c100effa2564b8ee4a3f2eff3412, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a2c7c100effa2564b8ee4a3f2eff3412, type: 3}
+    - m_Name: __black_seal_idle_on_land_007
+      m_Hash: 18102047
+      m_Sprite: {fileID: 21300000, guid: 454c35423a346694997570139022789f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 454c35423a346694997570139022789f, type: 3}
+    - m_Name: __black_seal_idle_on_land_008
+      m_Hash: -1851053426
+      m_Sprite: {fileID: 21300000, guid: ebfd21651a61aca4193763b44ea7c56b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ebfd21651a61aca4193763b44ea7c56b, type: 3}
+    - m_Name: __black_seal_idle_on_land_009
+      m_Hash: -424928744
+      m_Sprite: {fileID: 21300000, guid: 2eddad92bc0a9c94fb191c4c58aff778, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 2eddad92bc0a9c94fb191c4c58aff778, type: 3}
+    - m_Name: __black_seal_idle_on_land_010
+      m_Hash: -2039770115
+      m_Sprite: {fileID: 21300000, guid: c4339a7ccd5fddb469c9773f3da0f85a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: c4339a7ccd5fddb469c9773f3da0f85a, type: 3}
+    - m_Name: __black_seal_idle_on_land_011
+      m_Hash: -244538517
+      m_Sprite: {fileID: 21300000, guid: 2e666732efbb789409b63ee6b170766f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 2e666732efbb789409b63ee6b170766f, type: 3}
+    - m_Name: __black_seal_idle_on_land_012
+      m_Hash: 1751511761
+      m_Sprite: {fileID: 21300000, guid: 1ed1dadd6bbc8d64b81de90c045cd323, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1ed1dadd6bbc8d64b81de90c045cd323, type: 3}
+    - m_Name: __black_seal_idle_on_land_013
+      m_Hash: 526565959
+      m_Sprite: {fileID: 21300000, guid: 62c6e22d42fe3c84e8601150bc5ee4e4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 62c6e22d42fe3c84e8601150bc5ee4e4, type: 3}
+    - m_Name: __black_seal_idle_on_land_014
+      m_Hash: -2130290716
+      m_Sprite: {fileID: 21300000, guid: 221e545ca8c3ecf4a9fceea33ede8921, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 221e545ca8c3ecf4a9fceea33ede8921, type: 3}
+    - m_Name: __black_seal_idle_on_land_015
+      m_Hash: -167680142
+      m_Sprite: {fileID: 21300000, guid: 7449c8b00e71e9945be62b6512450138, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7449c8b00e71e9945be62b6512450138, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 16
+  - m_Name: idle_fromSnackTime
+    m_Hash: 1245059343
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_000
+      m_Hash: -719630495
+      m_Sprite: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_001
+      m_Hash: -1575190537
+      m_Sprite: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_002
+      m_Hash: 991243853
+      m_Sprite: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_003
+      m_Hash: 1276255963
+      m_Sprite: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: idle_fromSleepyTime
+    m_Hash: 731011537
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_transion_ground_to_upright_000
+      m_Hash: -2006455729
+      m_Sprite: {fileID: 21300000, guid: e11f6c920ebaa5a43a648aa15b27d2b6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e11f6c920ebaa5a43a648aa15b27d2b6, type: 3}
+    - m_Name: __black_seal_transion_ground_to_upright_001
+      m_Hash: -27206951
+      m_Sprite: {fileID: 21300000, guid: 5e43d75e2be34e441ace250ea6d12cc4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5e43d75e2be34e441ace250ea6d12cc4, type: 3}
+    - m_Name: __black_seal_transion_ground_to_upright_002
+      m_Hash: 1718192995
+      m_Sprite: {fileID: 21300000, guid: 8389f8f6c0ef5694abd94984cd27fdc0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8389f8f6c0ef5694abd94984cd27fdc0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: idle_faceForward
+    m_Hash: -180767913
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_000
+      m_Hash: -719630495
+      m_Sprite: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6e81cba869219f0448d38f2a18c96488, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_001
+      m_Hash: -1575190537
+      m_Sprite: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b5d05226526b87149a1fc153398dadb6, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_002
+      m_Hash: 991243853
+      m_Sprite: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ece971a8b6eae4e47a8727d2d320a182, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_003
+      m_Hash: 1276255963
+      m_Sprite: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6d4ee3a3ed009a6448da7d49623da5e4, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_004
+      m_Hash: -763982984
+      m_Sprite: {fileID: 21300000, guid: 3f9e2eef252304e47aefd3c71f0c3351, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3f9e2eef252304e47aefd3c71f0c3351, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_005
+      m_Hash: -1519272978
+      m_Sprite: {fileID: 21300000, guid: 68e48a42bde59a04683378fcf69953e0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 68e48a42bde59a04683378fcf69953e0, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_006
+      m_Hash: 1014557268
+      m_Sprite: {fileID: 21300000, guid: 7e9c14b0d3829a540801fc4aeb5186e8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7e9c14b0d3829a540801fc4aeb5186e8, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_007
+      m_Hash: 1266670274
+      m_Sprite: {fileID: 21300000, guid: 84d1aafe5acda2f4ab3cb2c89ca715e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 84d1aafe5acda2f4ab3cb2c89ca715e5, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_008
+      m_Hash: -608123053
+      m_Sprite: {fileID: 21300000, guid: aec74c42edc92a641abd8b2eae84faaf, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: aec74c42edc92a641abd8b2eae84faaf, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_009
+      m_Hash: -1396181051
+      m_Sprite: {fileID: 21300000, guid: d4d453398dc8d1b47a6cd64126b678fd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d4d453398dc8d1b47a6cd64126b678fd, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_010
+      m_Hash: -872382944
+      m_Sprite: {fileID: 21300000, guid: 54b51bd7d4100034bb66ba816d024ed0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 54b51bd7d4100034bb66ba816d024ed0, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_011
+      m_Hash: -1157149002
+      m_Sprite: {fileID: 21300000, guid: 20ac0b96550cbb946acc6c5af6f82973, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 20ac0b96550cbb946acc6c5af6f82973, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_012
+      m_Hash: 571350796
+      m_Sprite: {fileID: 21300000, guid: cc5d86a333c99214db2f40122f8cca8b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cc5d86a333c99214db2f40122f8cca8b, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_013
+      m_Hash: 1426665370
+      m_Sprite: {fileID: 21300000, guid: d427da6d5bcd30142b9bbb27ffd0f6a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d427da6d5bcd30142b9bbb27ffd0f6a1, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_014
+      m_Hash: -882001351
+      m_Sprite: {fileID: 21300000, guid: da31a2f991fe7434e8352474770fb849, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: da31a2f991fe7434e8352474770fb849, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_facing_camera_015
+      m_Hash: -1133868369
+      m_Sprite: {fileID: 21300000, guid: 7503053ff4fa1914887270366af8b1da, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7503053ff4fa1914887270366af8b1da, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 16
+  - m_Name: idle
+    m_Hash: -601574123
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_idle_on_land_upright_000
+      m_Hash: -2111830862
+      m_Sprite: {fileID: 21300000, guid: 8afeb9ef0919a77409ce4962ff85151b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8afeb9ef0919a77409ce4962ff85151b, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_001
+      m_Hash: -181980124
+      m_Sprite: {fileID: 21300000, guid: c1858445174672c4dbccffe7e0f43d7a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: c1858445174672c4dbccffe7e0f43d7a, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_002
+      m_Hash: 1814979998
+      m_Sprite: {fileID: 21300000, guid: 1ded0a8d605b86842b1c5ae1fa9c19c4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1ded0a8d605b86842b1c5ae1fa9c19c4, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_003
+      m_Hash: 455693576
+      m_Sprite: {fileID: 21300000, guid: 125c103222e527945a92177e8bc81ee2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 125c103222e527945a92177e8bc81ee2, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_004
+      m_Hash: -2058501973
+      m_Sprite: {fileID: 21300000, guid: a020cec5315658f4db773e21b9488fd4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a020cec5315658f4db773e21b9488fd4, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_005
+      m_Hash: -229969859
+      m_Sprite: {fileID: 21300000, guid: 2b48a5ee3c027e74ab3e80087560acc5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 2b48a5ee3c027e74ab3e80087560acc5, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_006
+      m_Hash: 1799594375
+      m_Sprite: {fileID: 21300000, guid: 328af182dd2418646b3a97fa42850418, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 328af182dd2418646b3a97fa42850418, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_007
+      m_Hash: 474255633
+      m_Sprite: {fileID: 21300000, guid: ea2ba35d085a87e4f8374f8318357f4d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ea2ba35d085a87e4f8374f8318357f4d, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_008
+      m_Hash: -1929671552
+      m_Sprite: {fileID: 21300000, guid: 087965be76f756f4d94d6da2e15bce50, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 087965be76f756f4d94d6da2e15bce50, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_009
+      m_Hash: -67322858
+      m_Sprite: {fileID: 21300000, guid: b12cb23042882924097041fa486582c9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b12cb23042882924097041fa486582c9, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_010
+      m_Hash: -1690618381
+      m_Sprite: {fileID: 21300000, guid: f411082af7a34414c87269225ac191f5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f411082af7a34414c87269225ac191f5, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_011
+      m_Hash: -331610779
+      m_Sprite: {fileID: 21300000, guid: a58a804664d9f8649800f30cd7f9e156, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a58a804664d9f8649800f30cd7f9e156, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_012
+      m_Hash: 1966429407
+      m_Sprite: {fileID: 21300000, guid: cd7810e13fe7f724cb1169996798fd87, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cd7810e13fe7f724cb1169996798fd87, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_013
+      m_Hash: 36856905
+      m_Sprite: {fileID: 21300000, guid: ed7646550e729f743808167720791578, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ed7646550e729f743808167720791578, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_014
+      m_Hash: -1672023574
+      m_Sprite: {fileID: 21300000, guid: c84c00e4b19cc6643a5ec8c30e8f8a52, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: c84c00e4b19cc6643a5ec8c30e8f8a52, type: 3}
+    - m_Name: __black_seal_idle_on_land_upright_015
+      m_Hash: -346963588
+      m_Sprite: {fileID: 21300000, guid: 0b1165fbfb67e5b45b341b7c7dabc8d6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0b1165fbfb67e5b45b341b7c7dabc8d6, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 16
+  - m_Name: gameComplete
+    m_Hash: 1520118823
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: __black_seal_move_jumping_on_land_000
+      m_Hash: 199333509
+      m_Sprite: {fileID: 21300000, guid: 5b1ddb39fdef43b408e71392fbba3c22, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5b1ddb39fdef43b408e71392fbba3c22, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_001
+      m_Hash: 2095490579
+      m_Sprite: {fileID: 21300000, guid: 36433c02d7c549347b96a63f3ace2614, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 36433c02d7c549347b96a63f3ace2614, type: 3}
+    - m_Name: __black_seal_move_jumping_on_land_002
+      m_Hash: -437258327
+      m_Sprite: {fileID: 21300000, guid: c1526e2cc1b149542b64072947a42801, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: c1526e2cc1b149542b64072947a42801, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  m_PrimaryLibraryGUID: 

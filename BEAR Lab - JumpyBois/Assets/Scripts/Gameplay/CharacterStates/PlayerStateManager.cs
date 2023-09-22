@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using UnityEditor.Animations;
 
 
 
@@ -29,8 +30,10 @@ public class PlayerStateManager : MonoBehaviour
     // For Animations
     [SerializeField] private SpriteLibraryAsset[] spriteLibraries;
     [HideInInspector] public Animator playerAnim;
+    [SerializeField] private AnimatorController[] animControllers;
 
     public InputManager inputManager;
+    public GraspSelector graspSelector;
 
     // Hashing for Performance
     [HideInInspector] public int Idle = Animator.StringToHash("Base Layer.idle");
@@ -48,13 +51,30 @@ public class PlayerStateManager : MonoBehaviour
     private enum SpriteLibraries
     {
         reindeer_brown, // 0
-        reindeer_grey // 1
+        reindeer_grey, // 1
+        reindeer_rudolph, // 2
+        reindeer_white, // 3
+        reindeer_whiteandbrown, // 4
+        seal_black, // 5
+        seal_cream, // 6
+        seal_grey, // 7
+        seal_white // 8
     }
 
     private void Start()
     {
         // Animator & Animation Reskinning
         playerAnim = this.GetComponent<Animator>();
+
+        // Assign animator controller; separate one for reindeer & seal
+        if (GlobalStorage.GameSettings.characterType == GlobalStorage.characterTypes.reindeer)
+        {
+            playerAnim.runtimeAnimatorController = animControllers[0];
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        } else if (GlobalStorage.GameSettings.characterType == GlobalStorage.characterTypes.seal)
+            playerAnim.runtimeAnimatorController = animControllers[1];
+
+
         int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), GlobalStorage.GameSettings.characterSelection);
         this.GetComponent<SpriteLibrary>().spriteLibraryAsset = spriteLibraries[charIndTemp];
 

@@ -6,7 +6,6 @@ public class PlayerWalkingState : PlayerBaseState
 {
     public RaycastHit2D collisionCheck;
     private bool collisionDetected; // For performance
-
     
 
     public override void EnterState(PlayerStateManager player)
@@ -15,6 +14,9 @@ public class PlayerWalkingState : PlayerBaseState
         player.playerAnim.Play(player.Walk);
         player.skillCheckObj.SetActive(false);
         collisionDetected = false;
+
+        // Loading the next random grasp up in the background whenever we enter the walking state
+        player.StartCoroutine(player.graspSelector.LoadNextGrasp());
     }
 
 

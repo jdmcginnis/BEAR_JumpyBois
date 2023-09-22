@@ -46,14 +46,14 @@ public class GlobalStorage : MonoBehaviour
 
     private void Start()
     {
-        activeGrasps = new List<graspNamesEnum> { };
+        // activeGrasps = new List<graspNamesEnum> { };
 
-        inactiveGrasps = new List<graspNamesEnum> { };
+        //inactiveGrasps = new List<graspNamesEnum> { };
 
-        foreach (graspNamesEnum graspName in Enum.GetValues(typeof(graspNamesEnum)))
-        {
-            inactiveGrasps.Add(graspName);
-        }
+        //foreach (graspNamesEnum graspName in Enum.GetValues(typeof(graspNamesEnum)))
+        //{
+        //    inactiveGrasps.Add(graspName);
+        //}
     }
 
 

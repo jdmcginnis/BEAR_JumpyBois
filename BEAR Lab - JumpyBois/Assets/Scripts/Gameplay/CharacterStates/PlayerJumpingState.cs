@@ -17,6 +17,9 @@ public class PlayerJumpingState : PlayerBaseState
         // temporarily disable box collider
         player.GetComponent<BoxCollider2D>().enabled = false;
 
+        // Update Image Sprite
+        player.graspSelector.MarkGraspCompleted();
+
         player.inputManager.enableInput = false;
 
         player.playerAnim.Play(player.Jump);

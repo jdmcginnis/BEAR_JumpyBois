@@ -13,10 +13,14 @@ public class InputManager : MonoBehaviour
     public bool recievingInput = false;
 
     public bool enableInput; // enables player input
-    
+
+    // Order matters; consult GlobalStorage graspNamesEnum variable
+    public string[] graspToKeybind; // Assigns each grasp to a keyboard key input
 
     [SerializeField] private SkillCheckBar skillCheckBar;
     [SerializeField] private PointsBar pointsBar;
+
+    [SerializeField] private InputActionReference gameKeyboardInput;
 
     private void Awake()
     {
@@ -24,6 +28,7 @@ public class InputManager : MonoBehaviour
         Time.fixedDeltaTime = (float)1 / (float)samplingRate;
 
         enableInput = false;
+
     }
 
     // Handles Keyboard Input Only
@@ -84,6 +89,16 @@ public class InputManager : MonoBehaviour
     {
         // Log data here
         Debug.Log("Data Logged!");
+    }
+
+    public void ChangeKeyBinding(int graspNum)
+    {
+        Debug.Log(graspToKeybind[graspNum]);
+
+        gameKeyboardInput.action.Disable();
+        gameKeyboardInput.action.ApplyBindingOverride(0, graspToKeybind[graspNum]);
+        gameKeyboardInput.action.Enable();
+
     }
 
 }

@@ -154,8 +154,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 310669182}
   - {fileID: 1722202007}
+  - {fileID: 310669182}
   m_Father: {fileID: 1698190703}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -251,7 +251,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298967992}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
@@ -625,12 +625,12 @@ GameObject:
   - component: {fileID: 766615939}
   - component: {fileID: 766615940}
   - component: {fileID: 766615944}
-  - component: {fileID: 766615941}
   - component: {fileID: 766615943}
   - component: {fileID: 766615942}
   - component: {fileID: 766615945}
   - component: {fileID: 766615947}
   - component: {fileID: 766615946}
+  - component: {fileID: 766615948}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -694,9 +694,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 5974b02c6f9c8824982c0d9848696d7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b1ddb39fdef43b408e71392fbba3c22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 8.65, y: 7.29}
@@ -743,7 +743,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.65, y: 7.29}
+    oldSize: {x: 9.96, y: 8.85}
     newSize: {x: 8.65, y: 7.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -752,22 +752,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.728592, y: 7.29}
   m_EdgeRadius: 0
---- !u!114 &766615941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766615936}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c447d6edf4bdb499dbdd4a0671397e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 8
-  inputManager: {fileID: 766615943}
-  skillCheckObj: {fileID: 1698190702}
-  skillCheckBar: {fileID: 619598937}
 --- !u!114 &766615942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +810,7 @@ MonoBehaviour:
     m_ActionId: a41f8e3d-4e71-4ab4-b636-59d85ec465ad
     m_ActionName: PlayerInput/GraspInput[/Keyboard/1]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Delsys
   m_DefaultActionMap: PlayerInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -846,8 +830,20 @@ MonoBehaviour:
   sampleTest: 0
   recievingInput: 0
   enableInput: 0
+  graspToKeybind:
+  - <Keyboard>/0
+  - <Keyboard>/1
+  - <Keyboard>/2
+  - <Keyboard>/3
+  - <Keyboard>/4
+  - <Keyboard>/5
+  - <Keyboard>/6
+  - <Keyboard>/7
+  - <Keyboard>/8
+  - <Keyboard>/9
   skillCheckBar: {fileID: 619598937}
   pointsBar: {fileID: 298967995}
+  gameKeyboardInput: {fileID: -6622907482894255395, guid: cf524389f324f9843bda44956c4daa9c, type: 3}
 --- !u!114 &766615944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,10 +862,23 @@ MonoBehaviour:
   pointsBar: {fileID: 298967995}
   spriteLibraries:
   - {fileID: 7108339969198208228, guid: 2c9f2cd01abef054daff27b1c798b419, type: 3}
+  - {fileID: 7108339969198208228, guid: e14ba1851f6219e4eb25266d049539fe, type: 3}
+  - {fileID: 7108339969198208228, guid: 41676b333ce609648b199c4a606c0802, type: 3}
+  - {fileID: 7108339969198208228, guid: 814f34eaacab22244b491f2dee5b01a1, type: 3}
+  - {fileID: 7108339969198208228, guid: 3b3e50e7f96b76741bde950d1cff0728, type: 3}
+  - {fileID: 7108339969198208228, guid: 67f3fa7898bd800449d93cbb04ce2fdf, type: 3}
+  - {fileID: 7108339969198208228, guid: 5fc836faae0744e4b85cc2a9a982818f, type: 3}
+  - {fileID: 7108339969198208228, guid: 078ec5b08b7584b4abecc79543fa7d80, type: 3}
+  - {fileID: 7108339969198208228, guid: 45430e795f68cd541ad9db5bcf61045b, type: 3}
   playerAnim: {fileID: 0}
+  animControllers:
+  - {fileID: 9100000, guid: a9daa9d50ca615f4f82c5786d3eeca2c, type: 2}
+  - {fileID: 9100000, guid: 0db3b15c0cf6a0a4e885f11fcd4f6bce, type: 2}
   inputManager: {fileID: 766615943}
+  graspSelector: {fileID: 766615948}
   Idle: -178524345
   Walk: -1527898105
+  Jump: -1899209660
   Idle_FaceForward: -1770514295
   Idle_ToSnackTime: 462541902
   Idle_SnackTime: -1550269255
@@ -887,7 +896,7 @@ Animator:
   m_GameObject: {fileID: 766615936}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a9daa9d50ca615f4f82c5786d3eeca2c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0db3b15c0cf6a0a4e885f11fcd4f6bce, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -911,7 +920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CategoryHash: 0
   m_labelHash: 0
-  m_SpriteKey: -5.9300808e-37
+  m_SpriteKey: -8.916907e+33
 --- !u!114 &766615947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +934,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 2c9f2cd01abef054daff27b1c798b419, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 67f3fa7898bd800449d93cbb04ce2fdf, type: 3}
+--- !u!114 &766615948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766615936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dedff2be2baae8489ccbee6dac5362f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 766615943}
+  graspImg: {fileID: 1106183290}
+  delsysGraspCheck:
+  - {fileID: 21300000, guid: e756586f03881a24996457d6e8741a7c, type: 3}
+  - {fileID: 21300000, guid: 1aa5f1d816e58e34ca122271d0b8fd8b, type: 3}
+  - {fileID: 21300000, guid: 554c901f223709046b3e7ce8f7b33f8b, type: 3}
+  - {fileID: 21300000, guid: efa11970fa76349499a7ce656d300062, type: 3}
+  - {fileID: 21300000, guid: a9550afee3d929d43adb7b1063523cdf, type: 3}
+  - {fileID: 21300000, guid: 522de0b0a2a53f648b73ec4e5d184696, type: 3}
+  - {fileID: 21300000, guid: 8a07a986ac5d3e94c8160f24d3555aea, type: 3}
+  - {fileID: 21300000, guid: 6db0138a2d65b024591f50ff61d8fadf, type: 3}
+  - {fileID: 21300000, guid: d37a94ea819a49a49a7d121e166597c2, type: 3}
+  - {fileID: 21300000, guid: 40dde9778f5a9704a9026476b2674f34, type: 3}
+  delsysGraspPass:
+  - {fileID: 21300000, guid: 274cea84317b6db46ac52ac693db67a3, type: 3}
+  - {fileID: 21300000, guid: f01f4d88931af1e4d92d97a7c1c2d403, type: 3}
+  - {fileID: 21300000, guid: b9bb4898b1e53b44ea0f70e2f5f82863, type: 3}
+  - {fileID: 21300000, guid: 4d7499ef60956e945b5c3a66d65fc8ee, type: 3}
+  - {fileID: 21300000, guid: 1bfa0272cc515ff4d97d4c8d92360d1e, type: 3}
+  - {fileID: 21300000, guid: ae9541274a9e7a340a00f75c9bfa2a94, type: 3}
+  - {fileID: 21300000, guid: 2bb5475b71b49814abce42417017f24f, type: 3}
+  - {fileID: 21300000, guid: dc151098256772b4f9032b513916de1b, type: 3}
+  - {fileID: 21300000, guid: 4fa8aedcbcd43574ba7ab9e04c308d11, type: 3}
+  - {fileID: 21300000, guid: 4425d3554528eb244b70301037875404, type: 3}
+  keyboardGraspCheck:
+  - {fileID: 21300000, guid: b69d818026ea7d74fa72782c5f74c9d7, type: 3}
+  - {fileID: 21300000, guid: 2debc521d77c677409c43597c651715f, type: 3}
+  - {fileID: 21300000, guid: 69fe47357a3b580439dfc20857c26a20, type: 3}
+  - {fileID: 21300000, guid: 2b3b9414cc0bab64c87fef9e9c287b62, type: 3}
+  - {fileID: 21300000, guid: c06fddb48d3af254fbc08084ed5deba8, type: 3}
+  - {fileID: 21300000, guid: 02f5bbdd776db344c853e4dc485a3bd9, type: 3}
+  - {fileID: 21300000, guid: 798c6d28a4fff7148ae9a496a4ca1b4e, type: 3}
+  - {fileID: 21300000, guid: ecaedec33172370448aa15acba66a717, type: 3}
+  - {fileID: 21300000, guid: c966d056ce9cae54bbe8b0dfe7af8090, type: 3}
+  - {fileID: 21300000, guid: 1eefbacbe90f1e641bee7b042f6aa72d, type: 3}
+  keyboardGraspPass:
+  - {fileID: 21300000, guid: bd2497a1ff0435f4d94d8154369b8066, type: 3}
+  - {fileID: 21300000, guid: 0a372906df7435b4eab39fd1434b4282, type: 3}
+  - {fileID: 21300000, guid: a2419c38a4373ad4eabdbf434e15a501, type: 3}
+  - {fileID: 21300000, guid: 04e8959da66b49048a4250180174e4f2, type: 3}
+  - {fileID: 21300000, guid: 7dab818fbe5c9c8438069a31951165cb, type: 3}
+  - {fileID: 21300000, guid: 64859e47aa962f74a99ae972fa88a6c5, type: 3}
+  - {fileID: 21300000, guid: 1acb2261b54ec14488b8826fd517df8f, type: 3}
+  - {fileID: 21300000, guid: a61509bc18d0aca49b482f10c5af1833, type: 3}
+  - {fileID: 21300000, guid: 7210730c90767f14abfda130341bf2f4, type: 3}
+  - {fileID: 21300000, guid: a8acdf008a1cc3148a05fdab32b73bb8, type: 3}
+  accumulatedGraspProbs: 
 --- !u!1 &795176120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1210,12 @@ MonoBehaviour:
   - {fileID: 4883086937467880339, guid: 49e3e6c77a8efed4bad12a459dce6647, type: 3}
   - {fileID: 6915960932759303773, guid: 20799af2e8affc34e9b6945de4e912b5, type: 3}
   - {fileID: 3267581357904969147, guid: 22f966f7157b6b14aa4fdee95c864c7a, type: 3}
-  sealModules: []
+  sealModules:
+  - {fileID: 619326504422605552, guid: 1bc47669c088cf34b85912fde1b919ef, type: 3}
+  - {fileID: 5404181492370164368, guid: 48417b5e7b44eae428104a1eb08aa07c, type: 3}
+  - {fileID: 4883086937467880339, guid: 49e3e6c77a8efed4bad12a459dce6647, type: 3}
+  - {fileID: 6915960932759303773, guid: 20799af2e8affc34e9b6945de4e912b5, type: 3}
+  - {fileID: 3267581357904969147, guid: 22f966f7157b6b14aa4fdee95c864c7a, type: 3}
   playerModulesLength: []
   playerModulesOffset: []
   spawnLocation: 0
@@ -1280,7 +1353,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298967992}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
@@ -1359,8 +1432,8 @@ MonoBehaviour:
   graspProbs: 14000000140000000000000000000000000000001400000014000000140000000000000000000000
   numTests: 20
   usingDelsys: 0
-  characterSelection: reindeer_brown
-  characterType: 0
+  characterSelection: seal_black
+  characterType: 1
   sceneSelection: arctic
 --- !u!4 &1757335163
 Transform:

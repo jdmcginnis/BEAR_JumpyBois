@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     private float skillcheckTotTime;
 
+    // NO LONGER USED?
+
     private void Start()
     {
         playerBoxCollider = this.GetComponent<BoxCollider2D>();
