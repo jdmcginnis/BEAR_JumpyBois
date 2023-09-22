@@ -55,7 +55,7 @@ public class ConnectionManager : MonoBehaviour
     private void ListenForData()
     {
         IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-        int port = 1924;
+        int port = 1925;
 
         listener = new TcpListener(ipAddress, port);
         writer = new CSV_Writer();
