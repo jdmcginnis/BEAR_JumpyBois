@@ -93,7 +93,7 @@ public class ipc_connect: MonoBehaviour {
                                     DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
                                     Debug.Log("The value is: " + dataValue.majority);
                                     inputManager.OnDelsysInput(dataValue.majority);
-
+                                    
                                     // Records data to CSV
                                     writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
                                     writer.WriteDataPoint(dataValue, getBufferContents(tempQueue), inputManager.enableInput);
