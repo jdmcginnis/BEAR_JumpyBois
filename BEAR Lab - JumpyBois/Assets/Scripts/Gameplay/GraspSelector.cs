@@ -28,7 +28,7 @@ public class GraspSelector : MonoBehaviour
     // private Random rnd = new Random();
     public int[] accumulatedGraspProbs; // for fetching grasps with probability P
 
-    private GlobalStorage.graspNamesEnum randGrasp;
+    public GlobalStorage.graspNamesEnum randGrasp;
 
     private void Awake()
     {
@@ -63,12 +63,15 @@ public class GraspSelector : MonoBehaviour
 
     public void MarkGraspCompleted()
     {
-        if (GlobalStorage.GameSettings.usingDelsys == true)
+        if (!inputManager.playerDidSkip)
         {
-            graspImg.sprite = delsysGraspPass[(int)randGrasp];
-        } else
-        {
-            graspImg.sprite = keyboardGraspPass[(int)randGrasp];
+            if (GlobalStorage.GameSettings.usingDelsys == true)
+            {
+                graspImg.sprite = delsysGraspPass[(int)randGrasp];
+            } else
+            {
+                graspImg.sprite = keyboardGraspPass[(int)randGrasp];
+            }
         }
     }
 

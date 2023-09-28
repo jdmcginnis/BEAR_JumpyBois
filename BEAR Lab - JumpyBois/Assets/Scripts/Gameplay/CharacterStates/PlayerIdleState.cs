@@ -24,6 +24,7 @@ public class PlayerIdleState : PlayerBaseState
         currentIdleState = (int)idleAnims.idle;
 
         // Open up option to skip this obstacle (spacebar)
+        player.inputManager.canPlayerSkip = true;
     }
 
 
@@ -55,7 +56,6 @@ public class PlayerIdleState : PlayerBaseState
         if (player.pointsBar.goalReached)
         {
             player.SwitchState(player.JumpingState);
-            // TODO: Mark skill check as completed (visual)
         }
     }
 

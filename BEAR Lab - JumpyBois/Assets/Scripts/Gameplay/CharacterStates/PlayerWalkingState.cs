@@ -27,7 +27,7 @@ public class PlayerWalkingState : PlayerBaseState
         if (!collisionDetected)
         {
             collisionCheck = Physics2D.BoxCast(player.transform.position, player.playerBoxCollider.size, 0,
-                new Vector2(1, 0), Mathf.Abs(player.playerSpeed * player.skillcheckTotTime),
+                new Vector2(1, 0), Mathf.Abs(player.playerSpeed * player.skillcheckTotTime) + player.playerBoxCollider.size.x / 2,
                 LayerMask.GetMask("Obstacle", "Player"));
 
             if (collisionCheck.collider != null)

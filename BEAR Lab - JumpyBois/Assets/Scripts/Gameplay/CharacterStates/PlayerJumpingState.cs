@@ -25,6 +25,9 @@ public class PlayerJumpingState : PlayerBaseState
         player.playerAnim.Play(player.Jump);
         apogee = false;
 
+        player.inputManager.canPlayerSkip = false;
+        player.inputManager.playerDidSkip = false;
+
     }
 
 

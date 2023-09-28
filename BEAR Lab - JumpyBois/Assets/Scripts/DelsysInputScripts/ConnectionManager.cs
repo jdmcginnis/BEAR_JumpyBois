@@ -169,6 +169,7 @@ public class ConnectionManager : MonoBehaviour
     private void OnDisable()
     {
         Debug.Log("Closing Port...");
-        listener.Stop();
+        if (listener != null)
+            listener.Stop();
     }
 }
