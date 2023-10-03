@@ -11,12 +11,8 @@ public class PointsBar : MonoBehaviour
 
     [SerializeField] private InputManager inputManager;
     [SerializeField] private SkillCheckBar skillCheckBar;
-
-
     [SerializeField] private RectTransform goalIndicator; 
-    // [SerializeField] private GameObject currPointsObj;
 
-    //private RectTransform currPointsBar; // grows in size with amount of correct input
     private float pointGoal;
 
     private float pointStepSize;
@@ -25,8 +21,6 @@ public class PointsBar : MonoBehaviour
 
     private Slider slider;
 
-    public int numCalls = 0;
-
     private void Awake()
     {
         slider = GetComponent<Slider>();
@@ -34,17 +28,12 @@ public class PointsBar : MonoBehaviour
         passPercentage = passPercentage / 100;
         slider.maxValue = this.GetComponent<RectTransform>().sizeDelta.x;
         pointGoal = passPercentage * (slider.maxValue);
-        goalIndicator.anchoredPosition = new Vector2(pointGoal, 0);
-
-        //currPointsBar = currPointsObj.GetComponent<RectTransform>();
-        
+        goalIndicator.anchoredPosition = new Vector2(pointGoal, 0);        
     }
 
     private void OnEnable()
     {
         slider.value = 0;
-        //currPointsBar.sizeDelta = new Vector2(0, 0);
-
         goalReached = false;
     }
 
@@ -52,11 +41,6 @@ public class PointsBar : MonoBehaviour
     private void Start()
     {
         pointStepSize = (Time.fixedDeltaTime / skillCheckBar.userInputTime) * slider.maxValue;
-
-        Debug.Log("Time: " + Time.fixedDeltaTime);
-        Debug.Log("User Input Time: " + skillCheckBar.userInputTime);
-        Debug.Log("Max Value: " + slider.maxValue);
-        Debug.Log("Point Step Size: " + pointStepSize);
 
     }
 
@@ -67,11 +51,8 @@ public class PointsBar : MonoBehaviour
             yield return new WaitUntil(inputManager.HandleKeyboardEarlyInput);
         }
 
-
         while (inputManager.recievingInput && inputManager.enableInput)
         {
-
-            numCalls++;
             // Grow size of bar
             slider.value += pointStepSize;
 
@@ -82,26 +63,5 @@ public class PointsBar : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
-
     }
-
-
-
-
-    //public IEnumerator RenderCorrectInput()
-    //{
-    //    while (inputManager.recievingInput && inputManager.enableInput)
-    //    {
-
-    //        // Grow size of bar
-    //        if (currPointsBar.sizeDelta.x < pointsBarLen)
-    //            currPointsBar.sizeDelta += new Vector2(pointStepSize, 0);
-
-    //        if (currPointsBar.sizeDelta.x > pointGoal)
-    //            goalReached = true;
-
-    //        yield return new WaitForFixedUpdate();
-
-    //    }
-    //}
 }

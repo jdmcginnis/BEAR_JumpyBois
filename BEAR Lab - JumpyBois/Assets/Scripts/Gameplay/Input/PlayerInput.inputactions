@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "GraspInput",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "a41f8e3d-4e71-4ab4-b636-59d85ec465ad",
                     "expectedControlType": "Digital",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [

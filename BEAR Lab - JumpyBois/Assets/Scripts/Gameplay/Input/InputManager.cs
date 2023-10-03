@@ -40,6 +40,12 @@ public class InputManager : MonoBehaviour
         enableInput = false;
         recievingEarlyInput = false;
 
+        
+    }
+
+    public void OnHIDInput(InputAction.CallbackContext context)
+    {
+
     }
 
     // Handles Keyboard Input Only
@@ -130,6 +136,9 @@ public class InputManager : MonoBehaviour
     private void DisableGraspKeyboardInput()
     {
         gameKeyboardInput.action.Disable();
+
+        // For Debugging!
+
     }
 
     public void ChangeKeyBinding(int graspNum)

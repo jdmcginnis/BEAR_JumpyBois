@@ -1,0 +1,3 @@
+Download drivers for the DAQ: https://www.ni.com/en/support/downloads/drivers/download.ni-daq-mx.html#484356
+
+https://github.com/JaneliaSciComp/janelia-unity-toolkit/blob/master/README.md#installation
