@@ -38,6 +38,8 @@ public class PlayerStateManager : MonoBehaviour
     public GraspSelector graspSelector;
 
     [SerializeField] public CameraMotor cameraMotor;
+    [SerializeField] public GameObject endingMenuUI;
+    [SerializeField] public GameObject blurCamera;
 
     // Hashing for Performance
     [HideInInspector] public int Idle = Animator.StringToHash("Base Layer.idle");
@@ -123,6 +125,14 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState = state;
         state.EnterState(this);
+    }
+
+    public IEnumerator DisplayEndGameMenu()
+    {
+        Debug.Log("Inside IEnumerator");
+        yield return new WaitForSeconds(2);
+        blurCamera.SetActive(true);
+        endingMenuUI.SetActive(true);
     }
 
 }

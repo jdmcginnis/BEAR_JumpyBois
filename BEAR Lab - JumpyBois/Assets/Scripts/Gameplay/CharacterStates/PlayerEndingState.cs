@@ -12,12 +12,14 @@ public class PlayerEndingState : PlayerBaseState
         player.playerAnim.CrossFade(player.gameComplete, 0, 0);
         playerRB = player.GetComponent<Rigidbody2D>();
         player.cameraMotor.enableCameraMove = false;
+        player.StartCoroutine(player.DisplayEndGameMenu());
     }
 
 
     public override void UpdateState(PlayerStateManager player)
     {
-            playerRB.velocity = new Vector3(15, 8, 0);
+        playerRB.velocity = new Vector3(15, 8, 0);
+        
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
@@ -28,4 +30,5 @@ public class PlayerEndingState : PlayerBaseState
     {
         throw new System.NotImplementedException();
     }
+
 }
