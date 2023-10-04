@@ -6,35 +6,36 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Sprite[] mainMenuSprites;
+    
 
-    // Start is called before the first frame update
     void Awake()
     {
         int randNum = Random.Range(0, mainMenuSprites.Length);
         this.GetComponent<Image>().sprite = mainMenuSprites[randNum];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
+    // Calibrate grasp signals first if not already done, then play game
     public void PlayGameButton()
     {
         Debug.Log("Play Game");
     }
     
+    // Exit Application
     public void QuitGameButton()
     {
         Debug.Log("Quit Game");
         Application.Quit();
     }
 
+    // Disabled by default unless user has administrator access
+    // Select grasps, total number of tests, num of tests per grasp, and input method
     public void AdministratorMenuButton()
     {
         Debug.Log("Administrator Menu");
     }
 
+    // Calibrate grasp signals
     public void SetupButton()
     {
         Debug.Log("Setup");

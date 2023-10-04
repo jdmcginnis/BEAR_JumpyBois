@@ -12,6 +12,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerWalkingState WalkingState = new PlayerWalkingState();
     public PlayerJumpingState JumpingState = new PlayerJumpingState();
     public PlayerIdleState IdleState = new PlayerIdleState();
+    public PlayerEndingState EndingState = new PlayerEndingState();
 
     public float playerSpeed;
 
@@ -24,6 +25,7 @@ public class PlayerStateManager : MonoBehaviour
     public Transform playerLoc { get; private set; }
     public float obstacleLayer { get; private set; }
     public float groundLayer { get; private set; }
+    public float endGameLayer { get; private set; }
 
     [SerializeField] public PointsBar pointsBar;
 
@@ -34,6 +36,8 @@ public class PlayerStateManager : MonoBehaviour
 
     public InputManager inputManager;
     public GraspSelector graspSelector;
+
+    [SerializeField] public CameraMotor cameraMotor;
 
     // Hashing for Performance
     [HideInInspector] public int Idle = Animator.StringToHash("Base Layer.idle");
@@ -46,6 +50,8 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public int Idle_ToSleepyTime = Animator.StringToHash("Base Layer.idle_toSleepyTime");
     [HideInInspector] public int Idle_SleepyTime = Animator.StringToHash("Base Layer.idle_sleepyTime");
     [HideInInspector] public int Idle_FromSleepyTime = Animator.StringToHash("Base Layer.idle_fromSleepyTime");
+    [HideInInspector] public int gameComplete = Animator.StringToHash("Base Layer.gameComplete");
+
 
     // References indices of each sprite library inside spriteLibraries
     private enum SpriteLibraries
@@ -89,6 +95,8 @@ public class PlayerStateManager : MonoBehaviour
 
         obstacleLayer = LayerMask.NameToLayer("Obstacle");
         groundLayer = LayerMask.NameToLayer("Ground");
+        endGameLayer = LayerMask.NameToLayer("EndGame");
+        Debug.Log("End Game Layer is: " + endGameLayer);
 
         playerRB = this.GetComponent<Rigidbody2D>();
         playerLoc = this.GetComponent<Transform>();
@@ -103,6 +111,11 @@ public class PlayerStateManager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         currentState.OnCollisionEnter2D(this, collision);
+    }
+
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        currentState.OnTriggerEnter2D(this, trigger);
     }
 
     // 

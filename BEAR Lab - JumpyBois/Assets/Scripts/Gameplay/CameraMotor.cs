@@ -11,21 +11,24 @@ public class CameraMotor : MonoBehaviour
     [SerializeField] private GameObject tmapContainer;
     private TModuleManager tmodManager;
 
+    public bool enableCameraMove;
+
 
     private void Start()
     {
+        enableCameraMove = true;
         camCollider = GetComponent<BoxCollider2D>();
         tmodManager = tmapContainer.GetComponent<TModuleManager>();
     }
 
     private void LateUpdate()
     {
-        MoveCamera();
+        if (enableCameraMove)
+            MoveCamera();
     }
 
     private void MoveCamera()
     {
-        // deltaX = playerPositionX - cameraPositionX + adjustableOffset
         float deltaX = lookAt.position.x - this.transform.position.x + cameraOffset;
         this.transform.position += new Vector3(deltaX, 0, 0);
     }

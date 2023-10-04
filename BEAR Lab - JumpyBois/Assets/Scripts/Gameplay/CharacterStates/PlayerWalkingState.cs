@@ -6,7 +6,7 @@ public class PlayerWalkingState : PlayerBaseState
 {
     public RaycastHit2D collisionCheck;
     private bool collisionDetected; // For performance
-    
+
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -40,7 +40,8 @@ public class PlayerWalkingState : PlayerBaseState
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
     {
-        // when there is a collision, enter either the jumping or idle state
+        Debug.Log("Collsion Detected!" + collision.collider.gameObject.layer);
+        // when there is an obstacle collision, enter either the jumping or idle state
         if (collision.collider.gameObject.layer == player.obstacleLayer)
         {
 
@@ -52,6 +53,13 @@ public class PlayerWalkingState : PlayerBaseState
             } else
                 player.SwitchState(player.IdleState);
         }
-        
+
+
+    }
+
+    public override void OnTriggerEnter2D(PlayerStateManager player, Collider2D trigger)
+    {
+            player.SwitchState(player.EndingState);
+
     }
 }

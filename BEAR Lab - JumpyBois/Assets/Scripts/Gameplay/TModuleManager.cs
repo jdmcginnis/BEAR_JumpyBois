@@ -76,6 +76,11 @@ public class TModuleManager : MonoBehaviour
     private void LoadEndingModule()
     {
         Debug.Log("This is the end!");
+
+        int nextTModuleInd = playerModules.Length - 1;
+
+        Instantiate(playerModules[nextTModuleInd], FetchNewModuleLocation(currentTModuleInd, nextTModuleInd), Quaternion.identity, this.transform);
+
     }
 
     private int GetRandomNumber()

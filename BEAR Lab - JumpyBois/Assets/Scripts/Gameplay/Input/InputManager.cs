@@ -62,29 +62,7 @@ public class InputManager : MonoBehaviour
         } else if (context.canceled)
         {
             recievingInput = false;
-            // recievingEarlyInput = false;
         }
-
-        
-        
-
-
-
-
-        //if (enableInput == true)
-        //{
-        //    if (context.performed)
-        //    {
-        //        Debug.Log("Starting Action...");
-        //        recievingInput = true;
-        //        StartCoroutine(pointsBar.RenderCorrectInput());
-        //        // StartCoroutine(LogDataCoroutine());
-        //    } else if (context.canceled)
-        //    {
-        //        Debug.Log("Ending Action...");
-        //        recievingInput = false;
-        //    }
-        //}
 
     }
 

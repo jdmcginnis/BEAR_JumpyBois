@@ -63,4 +63,9 @@ public class PlayerIdleState : PlayerBaseState
     {
         throw new System.NotImplementedException();
     }
+
+    public override void OnTriggerEnter2D(PlayerStateManager player, Collider2D trigger)
+    {
+        throw new System.NotImplementedException();
+    }
 }

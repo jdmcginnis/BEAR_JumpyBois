@@ -13,5 +13,8 @@ public abstract class PlayerBaseState
 
     // Manages what happens to this state when a collision occurs
     public abstract void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision);
+    
+    // Manages collision triggers (End Game State)
+    public abstract void OnTriggerEnter2D(PlayerStateManager player, Collider2D trigger);
 
 }

@@ -68,4 +68,9 @@ public class PlayerJumpingState : PlayerBaseState
             
 
     }
+
+    public override void OnTriggerEnter2D(PlayerStateManager player, Collider2D trigger)
+    {
+        throw new System.NotImplementedException();
+    }
 }

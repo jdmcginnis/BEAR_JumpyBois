@@ -16,9 +16,9 @@ TagManager:
   - LoadModuleTrigger
   - Obstacle
   - Ground
+  - EndGame
   - 
-  - 
-  - 
+  - PauseMenu
   - 
   - 
   - 
