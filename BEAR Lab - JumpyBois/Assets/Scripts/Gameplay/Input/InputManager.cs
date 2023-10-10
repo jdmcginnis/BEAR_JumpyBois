@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour
         // Ensures game and input runs according to our samplingRate
         Time.fixedDeltaTime = (float)1 / (float)samplingRate;
 
-        if (GlobalStorage.GameSettings.usingDelsys)
+        if (PlayerData.PlayerDataRef.usingDelsys)
             DisableGraspKeyboardInput();
 
         enableInput = false;

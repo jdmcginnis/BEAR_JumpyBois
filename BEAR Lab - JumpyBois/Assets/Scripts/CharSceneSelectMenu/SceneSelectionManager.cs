@@ -11,8 +11,8 @@ public class SceneSelectionManager : MonoBehaviour
 
     int defaultScene = (int)sceneChoices.arctic;
 
-    public void LogSceneData()
-    {
-        GlobalStorage.GameSettings.sceneSelection = ((sceneChoices)defaultScene).ToString();
-    }
+    //public void LogSceneData()
+    //{
+    //    GameLookup.GameRef.sceneSelection = ((sceneChoices)defaultScene).ToString();
+    //}
 }

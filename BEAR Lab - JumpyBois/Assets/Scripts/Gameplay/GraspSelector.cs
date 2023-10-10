@@ -28,7 +28,8 @@ public class GraspSelector : MonoBehaviour
     // private Random rnd = new Random();
     public int[] accumulatedGraspProbs; // for fetching grasps with probability P
 
-    public GlobalStorage.graspNamesEnum randGrasp;
+    public GameLookup.graspNamesEnum randGrasp;
+
 
     private void Awake()
     {
@@ -40,9 +41,9 @@ public class GraspSelector : MonoBehaviour
     {
         int tempAccum = 0;
 
-        foreach (GlobalStorage.graspNamesEnum graspName in GlobalStorage.GameSettings.activeGrasps)
+        foreach (GameLookup.graspNamesEnum graspName in PlayerData.PlayerDataRef.activeGrasps)
         {
-            tempAccum += GlobalStorage.GameSettings.graspProbs[(int)graspName];
+            tempAccum += PlayerData.PlayerDataRef.graspProbs[(int)graspName];
             accumulatedGraspProbs[(int)graspName] = tempAccum;
         }
 
@@ -55,7 +56,7 @@ public class GraspSelector : MonoBehaviour
         randGrasp = GetRandomGrasp();
         LoadNextGraspImage();
 
-        if (GlobalStorage.GameSettings.usingDelsys == false)
+        if (PlayerData.PlayerDataRef.usingDelsys == false)
             inputManager.ChangeKeyBinding((int)randGrasp);
 
         yield return null;
@@ -65,7 +66,7 @@ public class GraspSelector : MonoBehaviour
     {
         if (!inputManager.playerDidSkip)
         {
-            if (GlobalStorage.GameSettings.usingDelsys == true)
+            if (PlayerData.PlayerDataRef.usingDelsys == true)
             {
                 graspImg.sprite = delsysGraspPass[(int)randGrasp];
             } else
@@ -77,7 +78,7 @@ public class GraspSelector : MonoBehaviour
 
     private void LoadNextGraspImage()
     {
-        if (GlobalStorage.GameSettings.usingDelsys == true)
+        if (PlayerData.PlayerDataRef.usingDelsys == true)
         {
             graspImg.sprite = delsysGraspCheck[(int)randGrasp];
         } else
@@ -87,7 +88,7 @@ public class GraspSelector : MonoBehaviour
 
     }
 
-    private GlobalStorage.graspNamesEnum GetRandomGrasp()
+    private GameLookup.graspNamesEnum GetRandomGrasp()
     {
         // int randNum = rnd.Next(1, 101); // upper bound is exclusive (didn't seem to be too random)
         int randNum = Random.Range(1, 100); // both bounds are inclusive
@@ -95,7 +96,7 @@ public class GraspSelector : MonoBehaviour
         // Debug.Log("RANDOM NUMBER: " + randNum);
 
         int currentLowest = 100;
-        GlobalStorage.graspNamesEnum graspName = GlobalStorage.graspNamesEnum.IndexFlexion; // setting a default value
+        GameLookup.graspNamesEnum graspName = GameLookup.graspNamesEnum.IndexFlexion; // setting a default value
 
         for (int i = 0; i < 10; i++)
         {
@@ -104,7 +105,7 @@ public class GraspSelector : MonoBehaviour
                 if (accumulatedGraspProbs[i] <= currentLowest)
                 {
                     currentLowest = accumulatedGraspProbs[i];
-                    graspName = (GlobalStorage.graspNamesEnum)i;
+                    graspName = (GameLookup.graspNamesEnum)i;
                 }
             }
         }

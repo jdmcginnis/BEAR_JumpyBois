@@ -28,7 +28,7 @@ public class ConnectionManager : MonoBehaviour
     private void Awake()
     {
         // if we are using keyboard input, disable this script
-        if (GlobalStorage.GameSettings.usingDelsys == false)
+        if (PlayerData.PlayerDataRef.usingDelsys == false)
             this.enabled = false;
     }
 

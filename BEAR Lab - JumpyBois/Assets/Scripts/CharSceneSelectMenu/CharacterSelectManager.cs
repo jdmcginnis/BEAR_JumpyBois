@@ -22,11 +22,11 @@ public class CharacterSelectManager : MonoBehaviour
     private void Start()
     {
         // Setting default states
-        curCharInd = (int)GlobalStorage.characterTypes.reindeer;
+        curCharInd = (int)GameLookup.characterTypes.reindeer;
 
-        if (curCharInd == (int)GlobalStorage.characterTypes.reindeer)
+        if (curCharInd == (int)GameLookup.characterTypes.reindeer)
             currentCharacter = Reindeer;
-        else if (curCharInd == (int)GlobalStorage.characterTypes.seal)
+        else if (curCharInd == (int)GameLookup.characterTypes.seal)
             currentCharacter = Seal;
         else
             Debug.Log("ERROR: You need to implement this character!");
@@ -78,10 +78,10 @@ public class CharacterSelectManager : MonoBehaviour
     {
         switch (charType)
         {
-            case (int)GlobalStorage.characterTypes.reindeer:
+            case (int)GameLookup.characterTypes.reindeer:
                 currentCharacter = Reindeer;
                 break;
-            case (int)GlobalStorage.characterTypes.seal:
+            case (int)GameLookup.characterTypes.seal:
                 currentCharacter = Seal;
                 break;
         }

@@ -75,15 +75,15 @@ public class PlayerStateManager : MonoBehaviour
         playerAnim = this.GetComponent<Animator>();
 
         // Assign animator controller; separate one for reindeer & seal
-        if (GlobalStorage.GameSettings.characterType == GlobalStorage.characterTypes.reindeer)
+        if (PlayerData.PlayerDataRef.characterType == GameLookup.characterTypes.reindeer)
         {
             playerAnim.runtimeAnimatorController = animControllers[0];
             this.GetComponent<SpriteRenderer>().flipX = true;
-        } else if (GlobalStorage.GameSettings.characterType == GlobalStorage.characterTypes.seal)
+        } else if (PlayerData.PlayerDataRef.characterType == GameLookup.characterTypes.seal)
             playerAnim.runtimeAnimatorController = animControllers[1];
 
 
-        int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), GlobalStorage.GameSettings.characterSelection);
+        int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), PlayerData.PlayerDataRef.characterSelection);
         this.GetComponent<SpriteLibrary>().spriteLibraryAsset = spriteLibraries[charIndTemp];
 
         // Starting state

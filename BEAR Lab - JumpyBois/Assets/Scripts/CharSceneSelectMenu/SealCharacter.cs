@@ -49,7 +49,7 @@ public class SealCharacter : CharacterBaseState
 
     public override void LogCharacterData()
     {
-        GlobalStorage.GameSettings.characterSelection = ((sealTypes)currentStyle).ToString();
-        GlobalStorage.GameSettings.characterType = GlobalStorage.characterTypes.seal;
+        PlayerData.PlayerDataRef.characterSelection = ((sealTypes)currentStyle).ToString();
+        PlayerData.PlayerDataRef.characterType = GameLookup.characterTypes.seal;
     }
 }

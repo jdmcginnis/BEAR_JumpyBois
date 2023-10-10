@@ -51,7 +51,7 @@ public class ReindeerCharacter : CharacterBaseState
 
     public override void LogCharacterData()
     {
-        GlobalStorage.GameSettings.characterSelection = ((reindeerTypes)currentStyle).ToString();
-        GlobalStorage.GameSettings.characterType = GlobalStorage.characterTypes.reindeer;
+        PlayerData.PlayerDataRef.characterSelection = ((reindeerTypes)currentStyle).ToString();
+        PlayerData.PlayerDataRef.characterType = GameLookup.characterTypes.reindeer;
     }
 }

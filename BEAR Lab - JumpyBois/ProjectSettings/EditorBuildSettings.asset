@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/0.MainMenu.unity
     guid: f3b3be24c68ced24d95ef38f37e9f149
+  - enabled: 1
+    path: Assets/Scenes/5.CalibrationMenu.unity
+    guid: d8a177d3a6fe3644f847ba0ed76ac92a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: afcfd71221774ef49870904e782feb82, type: 2}

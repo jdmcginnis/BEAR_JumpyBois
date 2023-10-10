@@ -29,12 +29,12 @@ public class TModuleManager : MonoBehaviour
     {
         testCounter = 0;
 
-        switch (GlobalStorage.GameSettings.characterType)
+        switch (PlayerData.PlayerDataRef.characterType)
         {
-            case GlobalStorage.characterTypes.reindeer:
+            case GameLookup.characterTypes.reindeer:
                 playerModules = reindeerModules;
                 break;
-            case GlobalStorage.characterTypes.seal:
+            case GameLookup.characterTypes.seal:
                 playerModules = sealModules;
                 break;
             default:
@@ -59,7 +59,7 @@ public class TModuleManager : MonoBehaviour
     // Called from CameraMotor.cs upon collision trigger
     public void LoadNextModule()
     {
-        if (testCounter >= GlobalStorage.GameSettings.numTests)
+        if (testCounter >= PlayerData.PlayerDataRef.numTests)
         {
             LoadEndingModule();
             return;
