@@ -1720,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1729911586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,14 +1733,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb2bd5eedccce346bc385c0193258cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  graspsChosen: 0
   activeGrasps: 000000000400000005000000
   inactiveGrasps: 01000000020000000300000006000000070000000800000009000000
-  graspProbs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  numTests: 0
   usingDelsys: 0
-  characterSelection: 
+  numTests: 0
   characterType: 0
-  sceneSelection: 
+  reindeerSelection: 0
+  sealSelection: 0
+  graspProbs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  characterSelection: 
 --- !u!4 &1729911587
 Transform:
   m_ObjectHideFlags: 0

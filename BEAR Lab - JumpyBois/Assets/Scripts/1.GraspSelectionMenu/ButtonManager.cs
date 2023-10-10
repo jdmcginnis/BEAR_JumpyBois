@@ -24,7 +24,6 @@ public class ButtonManager: MonoBehaviour
     private void Start()
     {
         numSelGrasps = 0;
-        Debug.Log("TODO: Delete existing PlayerData object and create a new one!");
 
         // Preserves grasp choices if you click back button from ControlsAndSetup
         if (PlayerData.PlayerDataRef.graspsChosen)

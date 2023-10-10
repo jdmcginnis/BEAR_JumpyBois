@@ -395,11 +395,11 @@ MonoBehaviour:
   inactiveGrasps: 
   usingDelsys: 0
   numTests: 0
-  graspProbs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  characterSelection: 
   characterType: 0
   reindeerSelection: 0
   sealSelection: 0
+  graspProbs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  characterSelection: 
 --- !u!4 &312220038
 Transform:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_DisabledColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 0.27450982}
     m_ColorMultiplier: 1.96
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1307,6 +1307,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 65433053e6d113a4eb5dfd5bf2363202, type: 3}
   - {fileID: 21300000, guid: 877cbc008babc564b80699c6bc30915b, type: 3}
   - {fileID: 21300000, guid: b9e0ee4c423498a4fa7c8e16e9e020f8, type: 3}
+  playGameButton: {fileID: 329520007}
+  setupButton: {fileID: 1945514912}
+  playerDataObj: {fileID: 312220036}
 --- !u!1 &1665228577
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,7 +6321,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_DisabledColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 0.27450982}
     m_ColorMultiplier: 1.96
     m_FadeDuration: 0.1
   m_SpriteState:

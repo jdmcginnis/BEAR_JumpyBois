@@ -33,7 +33,7 @@ public class GameLookup : MonoBehaviour
         grey, // 1
         ruldolph, // 2
         white, // 3
-        whiteAndBrown // 4
+        whiteandbrown // 4
     }
 
     public enum sealTypes

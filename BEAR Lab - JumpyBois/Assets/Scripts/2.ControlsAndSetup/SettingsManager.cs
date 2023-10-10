@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -29,7 +30,9 @@ public class SettingsManager : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadSceneAsync("0.MainMenu");
-        Debug.Log("TODO: Save settings to file!");
+        SaveData();
+        Destroy(GameObject.Find("PlayerData"));
+        Destroy(PlayerData.PlayerDataRef);
     }
 
     public void ReturnToGraspSelection()
@@ -64,6 +67,14 @@ public class SettingsManager : MonoBehaviour
             PlayerData.PlayerDataRef.usingDelsys = true;
             delsysToggleSwitch.transform.localPosition += new Vector3(35, 0, 0);
         }
+    }
+
+    // Saves to: C:\Users\jmcgi\AppData\LocalLow\DefaultCompany\BEAR Lab - JumpyBois
+    private void SaveData()
+    {
+        string gameSettingsData = JsonUtility.ToJson(PlayerData.PlayerDataRef);
+        string filePath = Application.persistentDataPath + "/GameSettings.json";
+        System.IO.File.WriteAllText(filePath, gameSettingsData);
     }
 
 }

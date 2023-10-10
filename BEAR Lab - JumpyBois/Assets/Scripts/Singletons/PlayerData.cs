@@ -5,9 +5,10 @@ using System;
 using System.Linq;
 
 // Singleton Design Pattern for Storing Game Settings
+[Serializable] // Serializable, so we can save data
 public class PlayerData : MonoBehaviour
 {
-    public static PlayerData PlayerDataRef { get; private set; }
+    public static PlayerData PlayerDataRef;
 
     // for preserving grasps between GraspSelectionMenu and ControlsAndSetup
     [HideInInspector] public bool graspsChosen = false;
@@ -25,7 +26,10 @@ public class PlayerData : MonoBehaviour
     // Maps the grasp (enum) to how many times it'll appear in the game
     public IDictionary<GameLookup.graspNamesEnum, int> numTestsPerGrasp = new Dictionary<GameLookup.graspNamesEnum, int>();
 
-
+    // characterType tells us which selection we should read
+    public GameLookup.characterTypes characterType;
+    public GameLookup.reindeerTypes reindeerSelection;
+    public GameLookup.sealTypes sealSelection;
 
 
 
@@ -35,12 +39,7 @@ public class PlayerData : MonoBehaviour
     // OLD SHIT -----------------------------------------------------------------------------------------
     // Indices map to graspNamesEnum
     public int[] graspProbs = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-
-    // TODO: Change to enum; if seal create of type sealTypes. if reindeer create of type reindeerTypes
     public string characterSelection;
-    public GameLookup.characterTypes characterType;
-    public GameLookup.reindeerTypes reindeerSelection;
-    public GameLookup.sealTypes sealSelection;
     // OLD SHIT -----------------------------------------------------------------------------------------
 
 
