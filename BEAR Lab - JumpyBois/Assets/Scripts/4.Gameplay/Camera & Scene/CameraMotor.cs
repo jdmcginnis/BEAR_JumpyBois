@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
+    [SerializeField] private int cameraOffset; // 12 is a good value
+    [HideInInspector] public bool enableCameraMove;
+
     [SerializeField] private Transform lookAt;
-    [SerializeField] private int cameraOffset = 3;
-    private BoxCollider2D camCollider; // For loading new tilemap modules
-
-    [SerializeField] private GameObject tmapContainer;
-    private TModuleManager tmodManager;
-
-    public bool enableCameraMove;
-
+    [SerializeField] private TModuleManager tmoduleManager;
 
     private void Start()
     {
         enableCameraMove = true;
-        camCollider = GetComponent<BoxCollider2D>();
-        tmodManager = tmapContainer.GetComponent<TModuleManager>();
     }
 
     private void LateUpdate()
@@ -35,6 +29,6 @@ public class CameraMotor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        tmodManager.LoadNextModule();
+        tmoduleManager.LoadNextModule();
     }
 }

@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEditor.Animations;
-
-
+using System;
 
 public class PlayerStateManager : MonoBehaviour
 {
+    // Adjustable from Inspector
+    [field: SerializeField] public float playerSpeed { get; private set; }
+
+    // For Player States
     PlayerBaseState currentState;
     public PlayerWalkingState WalkingState = new PlayerWalkingState();
     public PlayerJumpingState JumpingState = new PlayerJumpingState();
     public PlayerIdleState IdleState = new PlayerIdleState();
     public PlayerEndingState EndingState = new PlayerEndingState();
+    
 
-    public float playerSpeed;
-
-    public GameObject skillCheckObj;
+    // For Skill Checks
+    [field: SerializeField] public GameObject skillCheckObj { get; private set; }
     [SerializeField] private SkillCheckBar skillCheckBar;
     public float skillcheckTotTime { get; private set; }
+
 
     public BoxCollider2D playerBoxCollider { get; private set; }
     public Rigidbody2D playerRB { get; private set; }
@@ -41,7 +45,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] public GameObject endingMenuUI;
     [SerializeField] public GameObject blurCamera;
 
-    // Hashing for Performance
+    // Hashing Animations for Performance
     [HideInInspector] public int Idle = Animator.StringToHash("Base Layer.idle");
     [HideInInspector] public int Walk = Animator.StringToHash("Base Layer.walk");
     [HideInInspector] public int Jump = Animator.StringToHash("Base Layer.jump");
@@ -53,7 +57,6 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public int Idle_SleepyTime = Animator.StringToHash("Base Layer.idle_sleepyTime");
     [HideInInspector] public int Idle_FromSleepyTime = Animator.StringToHash("Base Layer.idle_fromSleepyTime");
     [HideInInspector] public int gameComplete = Animator.StringToHash("Base Layer.gameComplete");
-
 
     // References indices of each sprite library inside spriteLibraries
     private enum SpriteLibraries
@@ -83,7 +86,17 @@ public class PlayerStateManager : MonoBehaviour
             playerAnim.runtimeAnimatorController = animControllers[1];
 
 
-        int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), PlayerData.PlayerDataRef.characterSelection);
+        // int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), PlayerData.PlayerDataRef.characterSelection.ToString());
+        string charName = PlayerData.PlayerDataRef.characterType.ToString() + "_";
+
+        if (PlayerData.PlayerDataRef.characterType == GameLookup.characterTypes.reindeer)
+            charName += PlayerData.PlayerDataRef.reindeerSelection.ToString();
+        else
+            charName += PlayerData.PlayerDataRef.sealSelection.ToString();
+
+        int charIndTemp = (int)System.Enum.Parse(typeof(SpriteLibraries), charName);
+        Debug.Log("Ind: " + charIndTemp + " and name: " + charName);
+
         this.GetComponent<SpriteLibrary>().spriteLibraryAsset = spriteLibraries[charIndTemp];
 
         // Starting state

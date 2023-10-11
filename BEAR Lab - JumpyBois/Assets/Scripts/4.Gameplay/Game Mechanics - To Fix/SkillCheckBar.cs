@@ -12,6 +12,7 @@ public class SkillCheckBar : MonoBehaviour
     // SkillCheck total time = userPrepTime + userInputTime
     [SerializeField] public float userPrepTime;
     [SerializeField] public float userInputTime;
+    public float skillcheckTotTime;
     private float skillBarSize;
     public float stepSize; 
     private float barPrepRegion; // length of prep portion of skillBar
@@ -52,6 +53,7 @@ public class SkillCheckBar : MonoBehaviour
 
     private void Start()
     {
+        skillcheckTotTime = userPrepTime + userInputTime;
         stepSize = (Time.fixedDeltaTime / (userPrepTime + userInputTime)) * skillBarSize;
     }
 

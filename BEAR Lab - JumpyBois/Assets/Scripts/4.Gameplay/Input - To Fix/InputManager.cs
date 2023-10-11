@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private int samplingRate; // samples per second
+    [SerializeField] private PauseMenu pauseMenu;
 
     public int sampleTest = 0;
 
@@ -145,6 +146,13 @@ public class InputManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    // Called when player presses 'Pause' key
+    public void OnPauseMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            pauseMenu.Pause();
     }
 
 }

@@ -2,33 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using Random = System.Random;
 
 public class TModuleManager : MonoBehaviour
 {
+    // Contains prefab tilemaps (TModules) for each type of character
+    // "TModules" == GameObjects with Tilemaps Attached
     [SerializeField] private GameObject[] reindeerModules;
     [SerializeField] private GameObject[] sealModules;
+    private GameObject[] playerModules; // holds TModules pertaining to our character selection
 
-    public Random rnd = new Random();
-    public int testCounter { get; private set; }
-    public int numTModules { get; private set; }
-    public int currentTModuleInd { get; private set; }
-
-    private GameObject[] playerModules;
-
-    public float[] playerModulesLength;
-    public float[] playerModulesOffset;
-
-    private float cellSize;
-
-    public float spawnLocation; // Center position of current module
-
-
+    private int numTModules;
+    private int trialCounter = 0;
+    private int currentTModuleInd = 0; // Start TModule
+    private float[] playerModulesLength; // Tilemap lengths
+    private float[] playerModulesOffset; // Tilemap offsets
+    private float spawnLocation = 0; // Center position of TModule
 
     private void Start()
     {
-        testCounter = 0;
-
         switch (PlayerData.PlayerDataRef.characterType)
         {
             case GameLookup.characterTypes.reindeer:
@@ -44,22 +35,30 @@ public class TModuleManager : MonoBehaviour
 
         numTModules = playerModules.Length;
 
-        cellSize = this.GetComponent<Grid>().cellSize.x;
         playerModulesLength = new float[numTModules];
         playerModulesOffset = new float[numTModules];
+
         RecordTModuleLengths();
-
-        currentTModuleInd = 0;
-        // spawnLocation = playerModules[0].GetComponent<Transform>().position.x;
-        // currentTModRPos = (playerModules[0].GetComponent<BoxCollider2D>().bounds.max.x / cellSize);
-        spawnLocation = 0;
-
     }
 
-    // Called from CameraMotor.cs upon collision trigger
+    private void RecordTModuleLengths()
+    {
+        int i = 0;
+
+        foreach (GameObject pModule in playerModules)
+        {
+            BoxCollider2D pModColl = pModule.GetComponent<BoxCollider2D>();
+            playerModulesLength[i] = (pModColl.size.x);
+            playerModulesOffset[i] = (pModColl.offset.x);
+
+            i++;
+        }
+    }
+
+    // Called from CameraMotor.cs upon collision w/ModuleEndTrigger
     public void LoadNextModule()
     {
-        if (testCounter >= PlayerData.PlayerDataRef.numTests)
+        if (trialCounter >= PlayerData.PlayerDataRef.numTests)
         {
             LoadEndingModule();
             return;
@@ -70,27 +69,23 @@ public class TModuleManager : MonoBehaviour
         Instantiate(playerModules[nextTModuleInd], FetchNewModuleLocation(currentTModuleInd, nextTModuleInd), Quaternion.identity, this.transform);
 
         currentTModuleInd = nextTModuleInd;
-        testCounter++;
+        trialCounter++;
     }
 
     private void LoadEndingModule()
     {
-        Debug.Log("This is the end!");
-
         int nextTModuleInd = playerModules.Length - 1;
-
         Instantiate(playerModules[nextTModuleInd], FetchNewModuleLocation(currentTModuleInd, nextTModuleInd), Quaternion.identity, this.transform);
-
     }
 
     private int GetRandomNumber()
     {
         // Exclude the starting TModule and ending TModule
-        int rndNum = rnd.Next(1, numTModules - 1);
-
+        int rndNum = Random.Range(1, numTModules - 1);
+        
         // Ensure modules do not repeat
         while (rndNum == currentTModuleInd)
-            rndNum = rnd.Next(1, numTModules - 1);
+            rndNum = Random.Range(1, numTModules - 1);
 
         return rndNum;
     }
@@ -103,20 +98,4 @@ public class TModuleManager : MonoBehaviour
         return new Vector3(spawnLocation, 0, 0);
     }
 
-    private void RecordTModuleLengths()
-    {
-        int i = 0;
-
-        foreach (GameObject pModule in playerModules)
-        {
-            playerModulesLength[i] = (pModule.GetComponent<BoxCollider2D>().size.x);
-            playerModulesOffset[i] = (pModule.GetComponent<BoxCollider2D>().offset.x);
-
-            i++;
-        }
-        
-    }
-
 }
-
-

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class PlayerBaseState
 {
-
     // Manages entry into this state from external trigger
     public abstract void EnterState(PlayerStateManager player);
 

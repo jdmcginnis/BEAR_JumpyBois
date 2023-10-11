@@ -62,4 +62,9 @@ public class PlayerWalkingState : PlayerBaseState
             player.SwitchState(player.EndingState);
 
     }
+
+    private void Testing()
+    {
+        // Add helper functions
+    }
 }

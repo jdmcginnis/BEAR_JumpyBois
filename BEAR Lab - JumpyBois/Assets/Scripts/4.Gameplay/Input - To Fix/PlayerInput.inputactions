@@ -62,7 +62,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Delsys",
                     "action": "Pause Game",
                     "isComposite": false,
                     "isPartOfComposite": false
