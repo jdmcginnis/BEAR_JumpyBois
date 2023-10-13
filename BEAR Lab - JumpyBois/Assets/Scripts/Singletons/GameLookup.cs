@@ -18,7 +18,8 @@ public class GameLookup : MonoBehaviour
         WristExtension, // 6
         WristFlexion, // 7
         WristRotation, // 8
-        WristRotation_Power // 9
+        WristRotation_Power, // 9
+        Rest // 10
     }
 
     public enum characterTypes

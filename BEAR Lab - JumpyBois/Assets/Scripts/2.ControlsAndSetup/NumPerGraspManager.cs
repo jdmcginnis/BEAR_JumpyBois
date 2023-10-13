@@ -13,8 +13,6 @@ public class NumPerGraspManager : MonoBehaviour
 
     private bool initialRun = true; // Prevents duplicate enums from being added to numTestsPerGrasp dictionary
 
-    // [SerializeField] private GameObject NavNextButton;
-
     // Which fields you have edited; prevents duplicated entries
     private HashSet<GameLookup.graspNamesEnum> customNumTests = new HashSet<GameLookup.graspNamesEnum>();
 
@@ -159,5 +157,6 @@ public class NumPerGraspManager : MonoBehaviour
             tempCounter++;
         }
         initialRun = false;
+
     }
 }

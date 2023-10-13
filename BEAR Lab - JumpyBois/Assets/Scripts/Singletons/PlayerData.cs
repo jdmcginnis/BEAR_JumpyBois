@@ -32,18 +32,6 @@ public class PlayerData : MonoBehaviour
     public GameLookup.sealTypes sealSelection;
 
 
-
-
-
-
-    // OLD SHIT -----------------------------------------------------------------------------------------
-    // Indices map to graspNamesEnum
-    public int[] graspProbs = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    public string characterSelection;
-    // OLD SHIT -----------------------------------------------------------------------------------------
-
-
-
     // Ensures only one instance of this singleton exists
     private void Awake()
     {

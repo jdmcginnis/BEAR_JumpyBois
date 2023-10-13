@@ -8,22 +8,23 @@ public class PlayerEndingState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entered Ending State!");
-        player.playerAnim.CrossFade(player.gameComplete, 0, 0);
+        Debug.Log("Entered Ending State! (Remove this notice!)");
+
         playerRB = player.GetComponent<Rigidbody2D>();
+        player.playerAnim.CrossFade(player.gameComplete, 0, 0);
         player.cameraMotor.enableCameraMove = false;
-        player.StartCoroutine(player.DisplayEndGameMenu());
+        player.StartCoroutine(player.endGameMenu.DisplayEndGameMenu());
     }
 
 
     public override void UpdateState(PlayerStateManager player)
     {
         playerRB.velocity = new Vector3(15, 8, 0);
-        
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
     {
+        throw new System.NotImplementedException();
     }
 
     public override void OnTriggerEnter2D(PlayerStateManager player, Collider2D trigger)

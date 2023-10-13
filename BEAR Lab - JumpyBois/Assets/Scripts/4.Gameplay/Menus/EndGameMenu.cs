@@ -11,7 +11,6 @@ public class EndGameMenu : MonoBehaviour
 
     public IEnumerator DisplayEndGameMenu()
     {
-        Debug.Log("Inside IEnumerator");
         yield return new WaitForSeconds(2);
         blurCamera.SetActive(true);
         endingMenuUI.SetActive(true);
@@ -23,6 +22,7 @@ public class EndGameMenu : MonoBehaviour
     {
         Destroy(GameObject.Find("PlayerData"));
         Destroy(PlayerData.PlayerDataRef);
+        // Destroy(Player)
         SceneManager.LoadSceneAsync("0.MainMenu");
 
         Time.timeScale = 1f;

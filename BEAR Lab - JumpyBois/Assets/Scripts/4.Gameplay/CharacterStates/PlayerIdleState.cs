@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerIdleState : PlayerBaseState
 {
 
-    private float timeElapsed;
+    private float timeElapsed; // used for transitioning idle animations
 
     private enum idleAnims
     {
@@ -14,49 +14,44 @@ public class PlayerIdleState : PlayerBaseState
         idle_sleepyTime // 3
     }
 
-    private int currentIdleState; // for better performance
+    private idleAnims currentIdleState; // for better performance
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entered Idle State!");
+        Debug.Log("Entered Idle State! (Remove this message!)");
+
         timeElapsed = 0;
         player.playerAnim.CrossFade(player.Idle, 0, 0);
-        currentIdleState = (int)idleAnims.idle;
-
-        // Open up option to skip this obstacle (spacebar)
-        player.inputManager.canPlayerSkip = true;
+        currentIdleState = idleAnims.idle;
     }
 
-
+    // Increments timer and plays idle animations
     public override void UpdateState(PlayerStateManager player)
     {
-
-        // Start timer and play idle animations!
         timeElapsed += Time.fixedDeltaTime;
 
-        if (currentIdleState == (int)idleAnims.idle && timeElapsed >= 5)
+        if (currentIdleState == idleAnims.idle && timeElapsed >= 5)
         {
             player.playerAnim.CrossFade(player.Idle_FaceForward, 0 , 0);
-            currentIdleState = (int)idleAnims.idle_faceForward;
+            currentIdleState = idleAnims.idle_faceForward;
         } 
         
-        else if (currentIdleState == (int)idleAnims.idle_faceForward && timeElapsed >= 10)
+        else if (currentIdleState == idleAnims.idle_faceForward && timeElapsed >= 10)
         {
             player.playerAnim.CrossFade(player.Idle_ToSnackTime, 0, 0);
-            currentIdleState = (int)idleAnims.idle_snackTime;
+            currentIdleState = idleAnims.idle_snackTime;
         }
 
-        else if (currentIdleState == (int)idleAnims.idle_snackTime && timeElapsed >= 30)
+        else if (currentIdleState == idleAnims.idle_snackTime && timeElapsed >= 30)
         {
             player.playerAnim.CrossFade(player.Idle_FromSnackTime, 0, 0);
-            currentIdleState = (int)idleAnims.idle_sleepyTime;
+            currentIdleState = idleAnims.idle_sleepyTime;
         }
 
-
+        // Continuously monitor if we have reached our points goal
         if (player.pointsBar.goalReached)
-        {
             player.SwitchState(player.JumpingState);
-        }
+
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)

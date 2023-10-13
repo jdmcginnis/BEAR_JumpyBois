@@ -92,12 +92,13 @@ public class ipc_connect: MonoBehaviour {
                                     // Creates a new DataPoint instance with the data calculated above and inputs into Delsys game control
                                     DataPoint dataValue = new DataPoint(getCurrentTime(), calculateMode(tempQueue));
                                     Debug.Log("The value is: " + dataValue.majority);
-                                    inputManager.OnDelsysInput(dataValue.majority);
+                                    Debug.Log("NOTE: Uncomment line below!");
+                                    // inputManager.OnDelsysInput(dataValue.majority);
                                     
                                     // Records data to CSV
                                     writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
-                                    writer.WriteDataPoint(dataValue, getBufferContents(tempQueue), inputManager.enableInput);
-                                    Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + " ,is taking input: " + inputManager.enableInput);
+                                    // writer.WriteDataPoint(dataValue, getBufferContents(tempQueue), inputManager.enableInput);
+                                    // Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + " ,is taking input: " + inputManager.enableInput);
                                 } else
                                 {
                                     Debug.Log("No data received");
