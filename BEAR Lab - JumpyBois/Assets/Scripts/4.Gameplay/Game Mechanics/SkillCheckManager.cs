@@ -29,8 +29,6 @@ public class SkillCheckManager : MonoBehaviour
     private void Start()
     {
         skillCheckTotTime = userPrepTime + userInputTime;
-        Debug.Log("TODO: Adjust where Time.fixedDeltaTime is set...");
-        Debug.Log("TODO: ...Ensure if SkillCheckContainer is initially enabled, there is no error w/the value");
     }
 
 

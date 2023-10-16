@@ -28,7 +28,7 @@ public class GraspSelector : MonoBehaviour
         remainingGraspsList = new List<GameLookup.graspNamesEnum>();
         remainingGraspsCount = PlayerData.PlayerDataRef.numTestsPerGrasp;
         StartCoroutine(SetupGraspsForGame());
-
+        currentGraspForTrial = GameLookup.graspNamesEnum.Rest; // Initially a resting state
     }
 
 
@@ -89,6 +89,9 @@ public class GraspSelector : MonoBehaviour
                 graspImg.sprite = keyboardGraspPass[(int)currentGraspForTrial];
             }
         }
+
+        // Once we complete the trial, reset this variable back to rest
+        currentGraspForTrial = GameLookup.graspNamesEnum.Rest;
     }
 
 

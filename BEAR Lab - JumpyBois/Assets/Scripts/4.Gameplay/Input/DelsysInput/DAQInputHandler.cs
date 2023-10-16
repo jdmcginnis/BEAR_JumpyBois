@@ -40,6 +40,11 @@ public class DAQInputHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
+        ReadSensorInput();
+    }
+
+    private void ReadSensorInput()
+    {
         // Reading
         int numReadPerChannel = 0;
         if (!NiDaqMx.ReadFromInputs(inputParams, ref readData, ref numReadPerChannel))

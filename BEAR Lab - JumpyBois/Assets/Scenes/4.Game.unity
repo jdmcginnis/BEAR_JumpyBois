@@ -167,9 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825aa0dc3375eae40a9928058c8478c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  samplingRate: 200
   pauseMenu: {fileID: 1064041969}
-  canPlayerSkip: 0
+  bufferSize: 5
 --- !u!1 &91504648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1740,7 @@ MonoBehaviour:
   skillCheckManager: {fileID: 1839929657}
   pointsBar: {fileID: 149422202}
   graspSelector: {fileID: 1701928964}
+  inputManager: {fileID: 27635098}
   endGameMenu: {fileID: 374632554}
   spriteLibraries:
   - {fileID: 7108339969198208228, guid: 2c9f2cd01abef054daff27b1c798b419, type: 3}
@@ -3249,6 +3249,7 @@ Transform:
   - {fileID: 1839929656}
   - {fileID: 27635097}
   - {fileID: 1701928963}
+  - {fileID: 1767801635}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3522,6 +3523,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761540734}
   m_CullTransparentMesh: 1
+--- !u!1 &1767801634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767801635}
+  - component: {fileID: 1767801636}
+  m_Layer: 0
+  m_Name: DataLogger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767801635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767801634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1671730794}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767801636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767801634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a7b76bab1c500438a7377b89095545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 27635098}
+  skillCheckManager: {fileID: 1839929657}
+  graspSelector: {fileID: 1701928964}
 --- !u!1 &1804063656
 GameObject:
   m_ObjectHideFlags: 0

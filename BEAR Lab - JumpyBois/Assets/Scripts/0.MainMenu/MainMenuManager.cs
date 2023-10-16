@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] private int samplingRate; // samples per second
+
     // Main Menu Images
     [SerializeField] private Sprite[] mainMenuSprites;
     [SerializeField] private Button playGameButton;
@@ -13,6 +15,9 @@ public class MainMenuManager : MonoBehaviour
     
     private void Awake()
     {
+        // Sets our input rate to our sampling rate
+        Time.fixedDeltaTime = 1f / (float)samplingRate;
+
         int randNum = Random.Range(0, mainMenuSprites.Length);
         this.GetComponent<Image>().sprite = mainMenuSprites[randNum];
 

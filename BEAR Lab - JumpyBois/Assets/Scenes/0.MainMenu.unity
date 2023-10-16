@@ -393,7 +393,7 @@ MonoBehaviour:
   graspsChosen: 0
   activeGrasps: 
   inactiveGrasps: 
-  usingDelsys: 1
+  usingDelsys: 0
   numTests: 0
   graspNameDictKeys: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   graspNumDictValues: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -1301,6 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b0f680fda0087845a0c14f6d627a1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  samplingRate: 200
   mainMenuSprites:
   - {fileID: 21300000, guid: 7e07de6e2b06ff44daf3b60cb8da9f6c, type: 3}
   - {fileID: 21300000, guid: c73e5b126ae19e54991d6c725de31390, type: 3}

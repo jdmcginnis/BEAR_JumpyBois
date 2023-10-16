@@ -50,6 +50,9 @@ public class PlayerIdleState : PlayerBaseState
         if (player.pointsBar.goalReached)
             player.SwitchState(player.JumpingState);
 
+        if (player.inputManager.wantsToSkip)
+            player.SwitchState(player.JumpingState);
+
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)

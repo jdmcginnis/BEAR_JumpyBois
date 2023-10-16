@@ -22,6 +22,9 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] public PointsBar pointsBar;
     [SerializeField] public GraspSelector graspSelector;
 
+    // For Skipping Trial
+    [SerializeField] public InputManager inputManager;
+
     // For Menus
     [SerializeField] public EndGameMenu endGameMenu;
 

@@ -40,7 +40,6 @@ public class PointsBar : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("TODO: This is reliant on where you set the Time.fixedDeltaTime");
         stepSize = (Time.fixedDeltaTime / skillCheckManager.userInputTime) * slider.maxValue;
     }
 

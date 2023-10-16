@@ -14,8 +14,6 @@ public class PlayerWalkingState : PlayerBaseState
         player.skillCheckManager.HideSkillCheck();
         obstacleDetected = false;
 
-        // Whenever we enter the walking state, we want to load up the next random grasp in the background
-        player.graspSelector.LoadNextGrasp();
     }
 
 
@@ -28,8 +26,10 @@ public class PlayerWalkingState : PlayerBaseState
         {
             RaycastHit2D collisionCheck = CheckForUpcomingCollision(player);
 
+            // When we detect an upcoming obstacle, load up the next grasp
             if (collisionCheck.collider != null)
             {
+                player.graspSelector.LoadNextGrasp();
                 player.skillCheckManager.ShowSkillCheck();
                 obstacleDetected = true;
             }
