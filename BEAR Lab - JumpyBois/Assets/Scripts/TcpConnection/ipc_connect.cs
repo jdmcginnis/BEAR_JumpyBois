@@ -24,6 +24,7 @@ public class ipc_connect: MonoBehaviour {
     private Queue<int> bufferQueue = new Queue<int>();
 
     [SerializeField] private InputManager inputManager;
+    [SerializeField] private GraspSelector graspSelector;
 
     // Start is called before the first frame update
     public void Start() { 
@@ -95,8 +96,8 @@ public class ipc_connect: MonoBehaviour {
                                     inputManager.OnDelsysInput(dataValue.majority);
                                     
                                     // Records data to CSV
-                                    writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
-                                    writer.WriteDataPoint(dataValue, getBufferContents(tempQueue), inputManager.enableInput);
+                                    writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Expected Output, Taking Input");
+                                    writer.WriteDataPoint(dataValue, getBufferContents(tempQueue), (int)graspSelector.randGrasp, inputManager.enableInput);
                                     Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + " ,is taking input: " + inputManager.enableInput);
                                 } else
                                 {

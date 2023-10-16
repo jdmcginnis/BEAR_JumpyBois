@@ -1573,6 +1573,7 @@ GameObject:
   - component: {fileID: 766615939}
   - component: {fileID: 766615940}
   - component: {fileID: 766615944}
+  - component: {fileID: 766615952}
   - component: {fileID: 766615943}
   - component: {fileID: 766615942}
   - component: {fileID: 766615945}
@@ -1985,6 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bufferSize: 5
   inputManager: {fileID: 766615943}
+  graspSelector: {fileID: 766615952}
 --- !u!114 &766615950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,6 +2014,26 @@ MonoBehaviour:
   gameIsPaused: 0
   pauseMenuUI: {fileID: 1804063656}
   blurCamera: {fileID: 2066444426}
+--- !u!114 &766615952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766615936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dedff2be2baae8489ccbee6dac5362f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 766615943}
+  graspImg: {fileID: 0}
+  delsysGraspCheck: []
+  delsysGraspPass: []
+  keyboardGraspCheck: []
+  keyboardGraspPass: []
+  accumulatedGraspProbs: 
+  randGrasp: 0
 --- !u!1 &795176120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,7 +3488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1757335162
 MonoBehaviour:
   m_ObjectHideFlags: 0

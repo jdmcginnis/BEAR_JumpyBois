@@ -49,6 +49,11 @@ public class GraspSelector : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        Debug.Log("Should be grasp: " + randGrasp.ToString());
+    }
+
     public IEnumerator LoadNextGrasp()
     {
         yield return new WaitForEndOfFrame(); // corrects initialization order (so this doesn't execute before Start() function

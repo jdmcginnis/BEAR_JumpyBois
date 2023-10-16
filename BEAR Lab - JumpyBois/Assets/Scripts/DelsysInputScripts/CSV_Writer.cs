@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using System.IO;
 using data;
+using Unity.VisualScripting;
+using System.Linq;
 
 public class CSV_Writer
 {
@@ -13,9 +15,17 @@ public class CSV_Writer
 
     public CSV_Writer()
     {
-        fileDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        fileName = "bear_data.csv";
-        filePath = Path.Combine(fileDirectory, fileName);
+        string rootDirectoryPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "bearlab");
+        findOrCreate(rootDirectoryPath);
+
+        string currentDate = DateTime.Now.ToString("MM-dd-yyyy");
+        string todaysDirPath = Path.Combine(rootDirectoryPath, currentDate);
+        findOrCreate(todaysDirPath);
+        int fileCount = getLatestFileCount(todaysDirPath, "*.csv") + 1;
+
+        // fileName = "bear_data.csv";
+        fileName = fileCount + ".csv";
+        filePath = Path.Combine(todaysDirPath, fileName);
     }
 
     public void WriteHeaders(string headers)
@@ -25,10 +35,10 @@ public class CSV_Writer
             s.WriteLine(headers);
         }
     }
-    public void WriteDataPoint(DataPoint dp, String bufferValues, bool isTakingInput) {
+    public void WriteDataPoint(DataPoint dp, String bufferValues, int expectedGrasp, bool isTakingInput) {
 
         using (StreamWriter s = new StreamWriter(filePath, true)) {
-            s.WriteLine(dp.timeStamp + "," + bufferValues + "," + dp.majority + "," + isTakingInput);
+            s.WriteLine(dp.timeStamp + "," + bufferValues + "," + dp.majority + "," + expectedGrasp + ","+ isTakingInput);
         }
         
     }
@@ -36,6 +46,41 @@ public class CSV_Writer
     public void CloseFile()
     {
         //Look up how to close StreamWriter and when.
+    }
+
+    private void findOrCreate(string path)
+    {
+        if(!File.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+            Debug.Log("Created directory to " + path);
+        } else
+        {
+            Debug.Log(path + " already exists!");
+        }
+    }
+
+    private int getLatestFileCount(string directoryPath, string filePattern)
+    {
+        string[] files = Directory.GetFiles(directoryPath, filePattern);
+        int largestNumber = 0;
+
+        if (files.Length > 0)
+        {
+            //ISSUE IN GETTING LARGEST FILE NUMBER HERE!!
+            largestNumber = files
+                .Select(file => Path.GetFileNameWithoutExtension(file))
+                .Where(fileName => int.TryParse(fileName, out _))
+                .Select(fileName => int.Parse(fileName))
+                .Max();
+
+            Debug.Log("The largest number is: " + largestNumber);
+        }
+        else
+        {
+            Debug.Log("No matching files found in the directory.");
+        }
+        return largestNumber;
     }
 
 }

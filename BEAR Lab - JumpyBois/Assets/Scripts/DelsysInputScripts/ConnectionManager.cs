@@ -24,6 +24,8 @@ public class ConnectionManager : MonoBehaviour
     private Queue<int> bufferQueue;
 
     [SerializeField] private InputManager inputManager;
+    [SerializeField] private GraspSelector graspSelector;
+
 
     private void Awake()
     {
@@ -59,6 +61,8 @@ public class ConnectionManager : MonoBehaviour
 
         listener = new TcpListener(ipAddress, port);
         writer = new CSV_Writer();
+        writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
+
 
         // if port is occupied, evict the squatters
 
@@ -102,9 +106,9 @@ public class ConnectionManager : MonoBehaviour
                                     inputManager.OnDelsysInput(dataValue.majority);
 
                                     // Records data to CSV
-                                    writer.WriteHeaders("Timestamp, Buffer Values, Majority Output, Taking Input");
-                                    writer.WriteDataPoint(dataValue, GetBufferContents(tempQueue), inputManager.enableInput);
-                                    Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + " ,is taking input: " + inputManager.enableInput);
+                                    writer.WriteDataPoint(dataValue, GetBufferContents(tempQueue), (int)graspSelector.randGrasp, inputManager.enableInput);
+                                    // graspSelector.randGrasp.ToString(),
+                                    Debug.Log("time stamp: " + dataValue.timeStamp + ", majority: " + dataValue.majority + ", expected grasp: " + graspSelector.randGrasp + " , is taking input: " + inputManager.enableInput);
                                 } else
                                 {
                                     Debug.Log("No data received");
