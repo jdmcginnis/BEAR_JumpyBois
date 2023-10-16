@@ -18,8 +18,6 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entered Idle State! (Remove this message!)");
-
         timeElapsed = 0;
         player.playerAnim.CrossFade(player.Idle, 0, 0);
         currentIdleState = idleAnims.idle;

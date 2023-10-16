@@ -27,7 +27,8 @@ public class SettingsManager : MonoBehaviour
             PlayerData.PlayerDataRef.usingDelsys = true;
     }
 
-    public void LoadNextScene()
+    // Called From Menu_Setup/NextButton
+    public void FinalizeSettings()
     {
         SceneManager.LoadSceneAsync("0.MainMenu");
         SaveData();
@@ -35,12 +36,14 @@ public class SettingsManager : MonoBehaviour
         Destroy(PlayerData.PlayerDataRef);
     }
 
+    // Called From Menu_Setup/BackButton
     public void ReturnToGraspSelection()
     {
         SceneManager.LoadSceneAsync("1.GraspSelectionMenu");
         Debug.Log("TODO: Implement This!");
     }
 
+    // Called From Menu_Setup/SetupContainer/SettingsContainer/Label_NumTests/Input_NumTests
     // Changing the number of tests set all the active grasps to have the default number of trials per grasp
     public void ChangeNumTests()
     {
@@ -49,6 +52,7 @@ public class SettingsManager : MonoBehaviour
         if (isNumeric && userInput > 0)
         {
             PlayerData.PlayerDataRef.numTests = userInput;
+            numPerGraspManager.markGraspsDefault();
             numPerGraspManager.AssignDefaultTestsPerGrasp();
         } else
             numTestsField.GetComponent<TMP_InputField>().text = PlayerData.PlayerDataRef.numTests.ToString();
@@ -72,6 +76,16 @@ public class SettingsManager : MonoBehaviour
     // Saves to: C:\Users\jmcgi\AppData\LocalLow\DefaultCompany\BEAR Lab - JumpyBois
     private void SaveData()
     {
+        // The JSON save utility doesn't handle complex data types like dictionaries
+        // We'll unpack it to two arrays for the purpose of saving
+        int i = 0;
+        foreach (KeyValuePair<GameLookup.graspNamesEnum, int> entry in PlayerData.PlayerDataRef.numTestsPerGrasp)
+        {
+            PlayerData.PlayerDataRef.graspNameDictKeys[i] = entry.Key;
+            PlayerData.PlayerDataRef.graspNumDictValues[i] = entry.Value;
+            i++;
+        }
+
         string gameSettingsData = JsonUtility.ToJson(PlayerData.PlayerDataRef);
         string filePath = Application.persistentDataPath + "/GameSettings.json";
         System.IO.File.WriteAllText(filePath, gameSettingsData);

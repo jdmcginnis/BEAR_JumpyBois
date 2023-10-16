@@ -10,8 +10,6 @@ public class PlayerWalkingState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entered PlayerWalkingState! (Remove This Message)");
-
         player.playerAnim.Play(player.Walk);
         player.skillCheckManager.HideSkillCheck();
         obstacleDetected = false;

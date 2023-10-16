@@ -65,6 +65,17 @@ public class MainMenuManager : MonoBehaviour
 
             // If the PlayerData object isn't empty, it overwrites the values
             JsonUtility.FromJsonOverwrite(gameSettingsData, PlayerData.PlayerDataRef);
+
+            // Reconstruct the dictionary from the two unpacked arrays
+            for (int i = 0; i < PlayerData.PlayerDataRef.graspNumDictValues.Length; i++)
+            {
+                int graspNum = PlayerData.PlayerDataRef.graspNumDictValues[i];
+                if (graspNum == 0)
+                    continue;
+                GameLookup.graspNamesEnum graspName = PlayerData.PlayerDataRef.graspNameDictKeys[i];
+                PlayerData.PlayerDataRef.numTestsPerGrasp.Add(graspName, graspNum);
+            }
+
         }
         catch
         {

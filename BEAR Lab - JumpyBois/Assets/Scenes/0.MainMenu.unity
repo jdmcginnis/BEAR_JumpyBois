@@ -393,13 +393,13 @@ MonoBehaviour:
   graspsChosen: 0
   activeGrasps: 
   inactiveGrasps: 
-  usingDelsys: 0
+  usingDelsys: 1
   numTests: 0
+  graspNameDictKeys: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graspNumDictValues: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   characterType: 0
   reindeerSelection: 0
   sealSelection: 0
-  graspProbs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  characterSelection: 
 --- !u!4 &312220038
 Transform:
   m_ObjectHideFlags: 0
@@ -1309,7 +1309,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b9e0ee4c423498a4fa7c8e16e9e020f8, type: 3}
   playGameButton: {fileID: 329520007}
   setupButton: {fileID: 1945514912}
-  playerDataObj: {fileID: 312220036}
 --- !u!1 &1665228577
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,11 @@ public class PlayerData : MonoBehaviour
     // Maps the grasp (enum) to how many times it'll appear in the game
     public IDictionary<GameLookup.graspNamesEnum, int> numTestsPerGrasp = new Dictionary<GameLookup.graspNamesEnum, int>();
 
+    // Dictionary can't be saved, so we'll unpack it into two arrays
+    // Declaring empty ones to be written to/read from upon save/load
+    public GameLookup.graspNamesEnum[] graspNameDictKeys = new GameLookup.graspNamesEnum[10];
+    public int[] graspNumDictValues = new int[10];
+
     // characterType tells us which selection we should read
     public GameLookup.characterTypes characterType;
     public GameLookup.reindeerTypes reindeerSelection;

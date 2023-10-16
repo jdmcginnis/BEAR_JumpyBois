@@ -28,6 +28,7 @@ public class GraspSelector : MonoBehaviour
         remainingGraspsList = new List<GameLookup.graspNamesEnum>();
         remainingGraspsCount = PlayerData.PlayerDataRef.numTestsPerGrasp;
         StartCoroutine(SetupGraspsForGame());
+
     }
 
 
@@ -37,9 +38,6 @@ public class GraspSelector : MonoBehaviour
         foreach (GameLookup.graspNamesEnum grasp in PlayerData.PlayerDataRef.activeGrasps)
         {
             remainingGraspsList.Add(grasp);
-
-            Debug.Log("Delete below line; just for testing!");
-            remainingGraspsCount.Add(grasp, 3);
         }
 
         yield return null;

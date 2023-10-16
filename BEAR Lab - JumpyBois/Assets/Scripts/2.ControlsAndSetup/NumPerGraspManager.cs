@@ -66,6 +66,8 @@ public class NumPerGraspManager : MonoBehaviour
         int numTestPerGrasp = PlayerData.PlayerDataRef.numTests / numGrasps;
         int remainder = PlayerData.PlayerDataRef.numTests % numGrasps;
 
+        Debug.Log("We are here");
+
         AddRedistributionToDictionary(numGrasps, numTestPerGrasp, remainder, true);
         UpdateUI();
     }
@@ -129,14 +131,24 @@ public class NumPerGraspManager : MonoBehaviour
 
     }
 
+
+    // Called whenever an automatic redistribution of grasp trials occurs
+    // numGrasps: how many unique active grasps are being written to the dictionary
+    // numTestPerGrasp: the minimum amount of tests/trials per grasp
+    // remainder: if there are leftover trials after evenly splitting trials among active grasps, handle these
+    // assigningDefault: Signals if we need to add a new entry to dictionary or overwrite the current value
     private void AddRedistributionToDictionary(int numGrasps, int numTestPerGrasp, int remainder, bool assigningDefault)
     {
 
         int tempCounter = 0;
         foreach (GameLookup.graspNamesEnum grasp in PlayerData.PlayerDataRef.activeGrasps)
         {
+            // We don't want to overwrite the value for grasps with a custom number of trials entry
+            if (customNumTests.Contains(grasp))
+                continue;
+
             // We only want one entry in dictionary; only gets added on the initial run
-            if (remainder != 0 && tempCounter >= numGrasps - remainder)
+            if ((remainder != 0) && (tempCounter >= numGrasps - remainder))
             {
                 if (initialRun)
                     PlayerData.PlayerDataRef.numTestsPerGrasp.Add(grasp, numTestPerGrasp + 1);
@@ -158,5 +170,11 @@ public class NumPerGraspManager : MonoBehaviour
         }
         initialRun = false;
 
+    }
+
+    public void markGraspsDefault()
+    {
+        foreach (GameLookup.graspNamesEnum grasp in PlayerData.PlayerDataRef.activeGrasps)
+            customNumTests.Remove(grasp);
     }
 }

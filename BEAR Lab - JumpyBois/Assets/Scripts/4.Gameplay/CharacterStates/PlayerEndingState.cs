@@ -8,8 +8,6 @@ public class PlayerEndingState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entered Ending State! (Remove this notice!)");
-
         playerRB = player.GetComponent<Rigidbody2D>();
         player.playerAnim.CrossFade(player.gameComplete, 0, 0);
         player.cameraMotor.enableCameraMove = false;

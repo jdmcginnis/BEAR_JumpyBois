@@ -7,8 +7,6 @@ public class PlayerJumpingState : PlayerBaseState
     
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("Entering Jumping State! (Remove this notice!)");
-
         // We have already received all the input we need for the current trial
         player.skillCheckManager.acceptingInput = false;
 
