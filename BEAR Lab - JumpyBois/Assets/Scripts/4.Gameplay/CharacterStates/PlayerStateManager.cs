@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
-using UnityEditor.Animations;
 using System;
 
 public class PlayerStateManager : MonoBehaviour
@@ -31,7 +30,7 @@ public class PlayerStateManager : MonoBehaviour
     // For Animations
     [SerializeField] private SpriteLibraryAsset[] spriteLibraries;
     [HideInInspector] public Animator playerAnim;
-    [SerializeField] private AnimatorController[] animControllers;
+    [SerializeField] private RuntimeAnimatorController[] animControllers;
 
     // Hashing Animations for Performance
     [HideInInspector] public int Idle = Animator.StringToHash("Base Layer.idle");

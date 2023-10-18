@@ -35,7 +35,7 @@ public class MatlabConnection : MonoBehaviour
     private void Start()
     {
         // Game initially paused; waiting for connection to resume
-        Time.timeScale = 0;
+        Time.timeScale = 0.01f;
         ConnectToServer();
         StartCoroutine(HandleGamePaused());
 
