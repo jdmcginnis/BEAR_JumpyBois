@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     private PlayerInput playerInput;
 
     // Defaults back to Rest if not receiving any input
-    public GameLookup.graspNamesEnum currentGraspInput { get; private set; } = GameLookup.graspNamesEnum.Rest;
+    public GameLookup.graspNamesEnum currentGraspInput = GameLookup.graspNamesEnum.Rest;
 
     [SerializeField] private int bufferSize;
     public Queue<GameLookup.graspNamesEnum> buffer { get; private set; }
@@ -156,23 +156,5 @@ public class InputManager : MonoBehaviour
 
 
 
-
-
-
-    //IEnumerator LogDataCoroutine(DataPoint dataPoint)
-    //{
-    //    while (recievingInput && enableInput)
-    //    {
-    //        LogData(ref dataPoint);
-    //        yield return new WaitForFixedUpdate();
-    //    }
-    //}
-
-    //private void LogData(ref DataPoint dataPoint)
-    //{
-
-    //    // Log data here
-    //    Debug.Log("Data Logged!");
-    //}
 
 }
