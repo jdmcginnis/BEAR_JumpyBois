@@ -2302,7 +2302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1079560331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   graspsChosen: 1
   activeGrasps: 020000000700000006000000
   inactiveGrasps: 00000000010000000300000004000000050000000800000009000000
-  usingDelsys: 0
+  usingDelsys: 1
   numTests: 5
   graspNameDictKeys: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   graspNumDictValues: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

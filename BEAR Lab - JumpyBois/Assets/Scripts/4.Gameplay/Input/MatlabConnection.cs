@@ -7,7 +7,6 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System;
-using data;
 using System.Linq;
 
 // Establishes a TCP connection w/Matlab and receives a stream of integers representing predictions
