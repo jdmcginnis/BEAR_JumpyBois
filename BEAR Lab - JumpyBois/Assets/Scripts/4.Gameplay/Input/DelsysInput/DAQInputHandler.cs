@@ -58,19 +58,16 @@ public class DAQInputHandler : MonoBehaviour
                 float[] rot = { 0, 0 };
                 for (int iChannel = 0; iChannel < inputParams.ChannelNames.Length; iChannel++)
                 {
-                    double sum = 0;
+                    double valueReadIn = 0;
                     // Debug.Log("Channel " + iChannel + " has " + numReadPerChannel + " ")
-                    for (int i = 0; i < numReadPerChannel; i++)
-                    {
-                        int j = NiDaqMx.IndexInReadBuffer(iChannel, numReadPerChannel, i);
-                        sum += readData[j];
-                    }
-                    float mean = (float)(sum / numReadPerChannel);
-
+                    
+                    int j = NiDaqMx.IndexInReadBuffer(iChannel, numReadPerChannel);
+                    valueReadIn = readData[j];
+                    
                     if (showEachRead)
                     {
-                        Debug.Log("Frame " + Time.frameCount + ": buffer size " + readData.Length +
-                            ", read " + numReadPerChannel + " values with mean " + mean);
+                        Debug.Log("Frame " + Time.frameCount + ": Channel " + iChannel +
+                            " has value " + valueReadIn);
                     }
 
                 }
