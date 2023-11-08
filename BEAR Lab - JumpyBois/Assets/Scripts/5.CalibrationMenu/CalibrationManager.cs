@@ -9,6 +9,9 @@ using TMPro;
 
 public class CalibrationManager : MonoBehaviour
 {
+    public static CalibrationManager Instance;
+    public GameLookup.graspNamesEnum currentGrasp;
+
     [System.Serializable]
     public class UserCalibrationValues
     {
@@ -36,6 +39,11 @@ public class CalibrationManager : MonoBehaviour
     {
         remainingGraspsCount = new Dictionary<GameLookup.graspNamesEnum, int>();
         remainingGraspsList = new List<GameLookup.graspNamesEnum>();
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     private void Start()
@@ -68,12 +76,12 @@ public class CalibrationManager : MonoBehaviour
     {
         while (remainingGraspsList.Count > 0)
         {
-            GameLookup.graspNamesEnum graspName = FetchRandomGrasp();
-            yield return StartCoroutine(LoadGrasp(graspName));
-            remainingGraspsCount[graspName] -= 1;
+            currentGrasp = FetchRandomGrasp();
+            yield return StartCoroutine(LoadGrasp(currentGrasp));
+            remainingGraspsCount[currentGrasp] -= 1;
 
-            if (remainingGraspsCount[graspName] <= 0)
-                remainingGraspsList.Remove(graspName);
+            if (remainingGraspsCount[currentGrasp] <= 0)
+                remainingGraspsList.Remove(currentGrasp);
         }
     }
 

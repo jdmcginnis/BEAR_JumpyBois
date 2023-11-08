@@ -9,6 +9,7 @@ public class DAQInputHandler : MonoBehaviour
     private NiDaqMx.InputParams inputParams;
     public double[] readData;
     public bool showEachRead;
+    public double[] currentFrameSignals = new double[7];
 
     private void Start()
     {
@@ -63,7 +64,9 @@ public class DAQInputHandler : MonoBehaviour
                     
                     int j = NiDaqMx.IndexInReadBuffer(iChannel, numReadPerChannel);
                     valueReadIn = readData[j];
-                    
+
+                    currentFrameSignals[iChannel] = valueReadIn; 
+
                     if (showEachRead)
                     {
                         Debug.Log("Frame " + Time.frameCount + ": Channel " + iChannel +

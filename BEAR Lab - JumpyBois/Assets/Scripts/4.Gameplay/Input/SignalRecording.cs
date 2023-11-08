@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
+using MathNet.Numerics;
+using MathNet.Numerics.LinearAlgebra;
 
 public class SignalRecording : MonoBehaviour
 {
     RecSession recSession;
     double[,,] recSessionData;
-    List<List<double>> allData;
+    int matrixRowCnt = 0;
+    string saveFilePath = "data.mat";
+
+    [SerializeField] private DAQInputHandler daqInputHandler;
+    [SerializeField] private CalibrationManager calibrationManager;
 
     void Start()
     {
+        matrixRowCnt = 0;
+
         recSession = new RecSession();
         recSession.sF = CallibrationSettings.sF;
         recSession.cT = CallibrationSettings.cT;
@@ -23,28 +31,40 @@ public class SignalRecording : MonoBehaviour
         int tdataXDimension = recSession.sF * recSession.sT;
         recSessionData = new double[tdataXDimension, recSession.nCh, recSession.nM];
 
-        allData = new List<List<double>>();
     }
 
     void FixedUpdate()
     {
-        // TODO: Take data (presumably from DAQInputHandler) and load into tdata
-        int ex = 0;
+        // TODO: Takes data (presumably from DAQInputHandler) and load into matrix recSessionData
+        int graspNum = (int)calibrationManager.currentGrasp;
 
-        // Copies contents of 2D array allData into a 3D array recSessionData at the third dimension slice indicated by ex
-        int numRows = recSessionData.GetLength(0);  // Number of rows
-        int numCols = recSessionData.GetLength(1);  // Number of columns
+        // Gets data from each channel
+        double ch0Data = daqInputHandler.currentFrameSignals[0];
+        double ch1Data = daqInputHandler.currentFrameSignals[1];
+        double ch2Data = daqInputHandler.currentFrameSignals[2];
+        double ch3Data = daqInputHandler.currentFrameSignals[3];
+        double ch4Data = daqInputHandler.currentFrameSignals[4];
+        double ch5Data = daqInputHandler.currentFrameSignals[5];
+        double ch6Data = daqInputHandler.currentFrameSignals[6];
 
-        for (int i = 0; i < numRows; i++)
-        {
-            for (int j = 0; j < numCols; j++)
-            {
-               // recSessionData[i, j, ex] = allData[ex * numRows * numCols + i * numCols + j];
-            }
-        }
+        // Adds data from each channel into matrix
+        recSessionData[matrixRowCnt, 0, graspNum] = ch0Data;
+        recSessionData[matrixRowCnt, 1, graspNum] = ch1Data;
+        recSessionData[matrixRowCnt, 2, graspNum] = ch2Data;
+        recSessionData[matrixRowCnt, 3, graspNum] = ch3Data;
+        recSessionData[matrixRowCnt, 4, graspNum] = ch4Data;
+        recSessionData[matrixRowCnt, 5, graspNum] = ch5Data;
+        recSessionData[matrixRowCnt, 6, graspNum] = ch6Data;
 
-        // TODO: Save struct to some readable file format
+        matrixRowCnt += 1;
+
+        // Save struct to some readable file format
+        Debug.Log("Saving recSession");
+        recSession.tdata = recSessionData;
+
+   
+        // TODO: Using Mat Generics. NET to save to MATLAB file
+
     }
-
 
 }
