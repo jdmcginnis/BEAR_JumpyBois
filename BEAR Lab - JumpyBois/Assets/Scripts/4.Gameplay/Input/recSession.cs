@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public struct RecSession
 {
     public int sF; // sampling frequency
@@ -7,7 +9,7 @@ public struct RecSession
     public int nM; // number of movements
     public int nR; // number of repetitions
     public int nCh; // number of channels (7)
-    public string[] mov; // movements
+    public List<GameLookup.graspNamesEnum> mov; // movements
     public string date; 
     public double[,,] tdata; // (sF * sT) x nCh x nM
 }

@@ -35,6 +35,8 @@ public class CalibrationManager : MonoBehaviour
     private IDictionary<GameLookup.graspNamesEnum, int> remainingGraspsCount; // graspEnum : numRemaining
     private List<GameLookup.graspNamesEnum> remainingGraspsList;
 
+    [SerializeField] private SignalRecording signalRecording;
+
     private void Awake()
     {
         remainingGraspsCount = new Dictionary<GameLookup.graspNamesEnum, int>();
@@ -74,6 +76,8 @@ public class CalibrationManager : MonoBehaviour
     // Loops through each grasp *repeatQty* number of times
     private IEnumerator CycleThroughGrasps()
     {
+        signalRecording.enabled = true;
+
         while (remainingGraspsList.Count > 0)
         {
             currentGrasp = FetchRandomGrasp();

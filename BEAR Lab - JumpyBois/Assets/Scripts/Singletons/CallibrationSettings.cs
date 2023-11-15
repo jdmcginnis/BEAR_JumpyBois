@@ -9,6 +9,6 @@ public static class CallibrationSettings
     public static int rT = 3;
     public static int nM = 10;
     public static int nR = 3;
-    public static int nCh = 4;
+    public static int nCh = 7;
 
 }

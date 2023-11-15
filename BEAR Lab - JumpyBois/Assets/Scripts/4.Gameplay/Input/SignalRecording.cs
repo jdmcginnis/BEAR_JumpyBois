@@ -1,9 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
-using MathNet.Numerics;
-using MathNet.Numerics.LinearAlgebra;
+using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using System.Linq;
 
 public class SignalRecording : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class SignalRecording : MonoBehaviour
         recSession.nR = CallibrationSettings.nR;
         recSession.nCh = CallibrationSettings.nCh;
         recSession.sT = (recSession.cT + recSession.rT) * recSession.nR;
+        recSession.date = DateTime.Now.ToString("MM-dd-yyyy");
+        recSession.mov = PlayerData.PlayerDataRef.activeGrasps;
 
         int tdataXDimension = recSession.sF * recSession.sT;
         recSessionData = new double[tdataXDimension, recSession.nCh, recSession.nM];
@@ -62,8 +65,8 @@ public class SignalRecording : MonoBehaviour
         Debug.Log("Saving recSession");
         recSession.tdata = recSessionData;
 
-   
-        // TODO: Using Mat Generics. NET to save to MATLAB file
+        //Save data in recSession to a MATLAB file
+        MatLabFileHandler.recSessionMlWriter(recSession);
 
     }
 
