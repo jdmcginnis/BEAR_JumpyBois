@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 // TODO: Maybe have something where you have an amplitude bar serving as visual feedback
 // so they go back to resting instead of flexing outwards
 
@@ -35,12 +36,14 @@ public class CalibrationManager : MonoBehaviour
     private IDictionary<GameLookup.graspNamesEnum, int> remainingGraspsCount; // graspEnum : numRemaining
     private List<GameLookup.graspNamesEnum> remainingGraspsList;
 
-    [SerializeField] private SignalRecording signalRecording;
+    [SerializeField] private GameObject signalRecordingGO;
 
     private void Awake()
     {
         remainingGraspsCount = new Dictionary<GameLookup.graspNamesEnum, int>();
         remainingGraspsList = new List<GameLookup.graspNamesEnum>();
+        Debug.Log("Calling Callibration Manager");
+
 
         if (Instance == null)
         {
@@ -76,7 +79,7 @@ public class CalibrationManager : MonoBehaviour
     // Loops through each grasp *repeatQty* number of times
     private IEnumerator CycleThroughGrasps()
     {
-        signalRecording.enabled = true;
+        signalRecordingGO.SetActive(true);
 
         while (remainingGraspsList.Count > 0)
         {

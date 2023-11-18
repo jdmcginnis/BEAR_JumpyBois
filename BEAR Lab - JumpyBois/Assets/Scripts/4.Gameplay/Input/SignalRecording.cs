@@ -11,13 +11,13 @@ public class SignalRecording : MonoBehaviour
     RecSession recSession;
     double[,,] recSessionData;
     int matrixRowCnt = 0;
-    string saveFilePath = "data.mat";
 
     [SerializeField] private DAQInputHandler daqInputHandler;
     [SerializeField] private CalibrationManager calibrationManager;
 
     void Start()
     {
+        Debug.Log("Starting Signal Recording");
         matrixRowCnt = 0;
 
         recSession = new RecSession();
