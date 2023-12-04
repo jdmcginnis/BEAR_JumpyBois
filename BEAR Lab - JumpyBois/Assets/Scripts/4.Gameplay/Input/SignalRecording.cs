@@ -32,8 +32,8 @@ public class SignalRecording : MonoBehaviour
         recSession.mov = PlayerData.PlayerDataRef.activeGrasps;
 
         int tdataXDimension = recSession.sF * recSession.sT;
-        recSessionData = new double[tdataXDimension, recSession.nCh, recSession.nM];
-
+        recSessionData = new double[recSession.nM, tdataXDimension, recSession.nCh];
+        
     }
 
     void FixedUpdate()
@@ -51,13 +51,13 @@ public class SignalRecording : MonoBehaviour
         double ch6Data = daqInputHandler.currentFrameSignals[6];
 
         // Adds data from each channel into matrix
-        recSessionData[matrixRowCnt, 0, graspNum] = ch0Data;
-        recSessionData[matrixRowCnt, 1, graspNum] = ch1Data;
-        recSessionData[matrixRowCnt, 2, graspNum] = ch2Data;
-        recSessionData[matrixRowCnt, 3, graspNum] = ch3Data;
-        recSessionData[matrixRowCnt, 4, graspNum] = ch4Data;
-        recSessionData[matrixRowCnt, 5, graspNum] = ch5Data;
-        recSessionData[matrixRowCnt, 6, graspNum] = ch6Data;
+        recSessionData[graspNum, matrixRowCnt, 0] = ch0Data;
+        recSessionData[graspNum, matrixRowCnt, 1] = ch1Data;
+        recSessionData[graspNum, matrixRowCnt, 2] = ch2Data;
+        recSessionData[graspNum, matrixRowCnt, 3] = ch3Data;
+        recSessionData[graspNum, matrixRowCnt, 4] = ch4Data;
+        recSessionData[graspNum, matrixRowCnt, 5] = ch5Data;
+        recSessionData[graspNum, matrixRowCnt, 6] = ch6Data;
 
         matrixRowCnt += 1;
 
